@@ -50,6 +50,9 @@
 	remove_radio(src, frequency)
 	frequency = add_radio(src, new_frequency)
 
+/obj/item/device/radio/proc/set_key(new_key)
+	key = format_encryption_key(new_key)
+
 /obj/item/device/radio/New()
 	wires = new /datum/wires/radio(src)
 	if(prison_radio)
@@ -199,7 +202,7 @@
 					recalculateChannels()
 				. = TRUE
 		if("key")
-			key = format_encryption_key(input("Enter new encryption key", "Encryption", key))
+			set_key(input("Enter new encryption key", "Encryption", key))
 			. = TRUE
 
 /obj/item/device/radio/talk_into(atom/movable/M, message, channel, list/spans)

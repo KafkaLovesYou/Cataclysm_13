@@ -80,6 +80,7 @@
 		H.add_memory("[F.name] is using freq ([F.freq]) with encryption key ([F.encryption_key])")
 		for(var/obj/item/device/radio/R in H.get_contents())
 			R.set_frequency(F.freq)
+			R.set_key(F.encryption_key)
 
 //	if(!visualsOnly && announce)
 //		announce(H)
