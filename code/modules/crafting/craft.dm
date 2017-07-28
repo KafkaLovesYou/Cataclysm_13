@@ -23,6 +23,7 @@
 	var/datum/action/innate/crafting/button
 	var/display_craftable_only = FALSE
 	var/display_compact = TRUE
+	var/hide_default = FALSE
 
 
 
@@ -75,9 +76,11 @@
 					continue
 				. += AM
 
-/datum/personal_crafting/proc/get_surroundings(mob/user)
+/datum/personal_crafting/proc/get_surroundings(mob/user, list/environment)
 	. = list()
-	for(var/obj/item/I in get_environment(user))
+	if(!environment)
+		environment = get_environment(user)
+	for(var/obj/item/I in environment)
 		if(I.flags & HOLOGRAM)
 			continue
 		if(istype(I, /obj/item/stack))
@@ -270,8 +273,10 @@
 	data["next_cat"] = categories[next_cat()]
 	data["display_craftable_only"] = display_craftable_only
 	data["display_compact"] = display_compact
+	data["hide_default"] = hide_default
 
-	var/list/surroundings = get_surroundings(user)
+	var/list/environment = get_environment(user)
+	var/list/surroundings = get_surroundings(user, environment)
 	var/list/can_craft = list()
 	var/list/cant_craft = list()
 	for(var/rec in crafting_recipes)
@@ -282,6 +287,14 @@
 			can_craft += list(build_recipe_data(R))
 		else
 			cant_craft += list(build_recipe_data(R))
+	for(var/obj/item/blueprint/B in environment)
+		var/datum/crafting_recipe/R = B.recipe
+		if(R.category != cur_category)
+			continue
+		if(check_contents(R, surroundings))
+			can_craft += list(build_recipe_data(R, FALSE))
+		else
+			cant_craft += list(build_recipe_data(R, FALSE))
 	data["can_craft"] = can_craft
 	data["cant_craft"] = cant_craft
 	return data
@@ -314,6 +327,10 @@
 			display_craftable_only = !display_craftable_only
 			to_chat(usr, "<span class='notice'>You will now [display_craftable_only ? "only see recipes you can craft":"see all recipes"].</span>")
 			. = TRUE
+		if("toogle_hiding")
+			to_chat(usr, "<span class='notice'>You will now [display_craftable_only ? "only see recipes you have blueprints (non-default)":"see all recipes include default"].</span>")
+			hide_default = !hide_default
+			. = TRUE
 		if("toggle_compact")
 			display_compact = !display_compact
 			to_chat(usr, "<span class='notice'>Crafting menu is now [display_compact? "compact" : "full size"].</span>")
@@ -334,7 +351,7 @@
 		. = categories.len
 
 
-/datum/personal_crafting/proc/build_recipe_data(datum/crafting_recipe/R)
+/datum/personal_crafting/proc/build_recipe_data(datum/crafting_recipe/R, is_default = TRUE)
 	var/list/data = list()
 	data["name"] = R.name
 	data["ref"] = "\ref[R]"
@@ -361,5 +378,7 @@
 		tool_text += " [R.tools[A]] [initial(A.name)],"
 	tool_text = replacetext(tool_text,",","",-1)
 	data["tool_text"] = tool_text
+
+	data["is_default"] = is_default
 
 	return data
