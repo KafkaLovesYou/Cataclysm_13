@@ -11,7 +11,7 @@
 		new /obj/effect/gibspawner/humanbodypartless(loc, viruses, dna)
 
 /mob/living/carbon/human/spawn_dust()
-	new /obj/effect/decal/remains/human(loc)
+	new /obj/effect/decal/cleanable/remains/human(loc)
 
 /mob/living/carbon/human/death(gibbed)
 	if(stat == DEAD)
