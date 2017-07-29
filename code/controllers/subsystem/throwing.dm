@@ -131,7 +131,7 @@ var/datum/subsystem/throwing/SSthrowing
 /datum/thrownthing/proc/hitcheck()
 	for (var/thing in get_turf(thrownthing))
 		var/atom/movable/AM = thing
-		if (AM == thrownthing)
+		if (AM == thrownthing || AM == thrower)
 			continue
 		if (AM.density && !(AM.pass_flags & LETPASSTHROW) && !(AM.flags & ON_BORDER))
 			thrownthing.throwing = 0
