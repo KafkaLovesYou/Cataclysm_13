@@ -328,7 +328,7 @@
 			to_chat(usr, "<span class='notice'>You will now [display_craftable_only ? "only see recipes you can craft":"see all recipes"].</span>")
 			. = TRUE
 		if("toogle_hiding")
-			to_chat(usr, "<span class='notice'>You will now [display_craftable_only ? "only see recipes you have blueprints (non-default)":"see all recipes include default"].</span>")
+			to_chat(usr, "<span class='notice'>You will now [hide_default ? "only see recipes you have blueprints (non-default)":"see all recipes include default"].</span>")
 			hide_default = !hide_default
 			. = TRUE
 		if("toggle_compact")
