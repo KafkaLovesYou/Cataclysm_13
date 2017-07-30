@@ -462,6 +462,7 @@
 		mind.transfer_to(new_character)					//won't transfer key since the mind is not active
 
 	new_character.name = real_name
+	/*
 	if(client.prefs.real_name == "Aabbaabbab Babbaba")
 		for(var/mob/M in player_list)
 			var/sound/S = sound('sound/misc/gameover.ogg',repeat=1,channel=rand(100,600),volume=100)
@@ -476,7 +477,7 @@
 				sleep(1)
 				M.gib()
 		src.create_character()
-
+	*/
 	new_character.key = key		//Manually transfer the key to log them in
 	new_character.stopLobbySound()
 
