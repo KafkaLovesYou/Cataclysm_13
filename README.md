@@ -1,29 +1,11 @@
-##Fallout 13 Beta 0.1
+##Cataclysm 13 Pre-Alpha
 
-**Website:** https://www.reddit.com/r/Fallout13
-
-**Main source code:** https://bitbucket.org/Jackerzz/fallout-13/
-
-**Discord:**  https://discord.me/fallout13official
 
 ##Terms of service
 
 A friendly reminder to anyone who would like to create personal edition of a game to host a server while keeping the code base private - a source code is licensed under /tg/ Station 13 terms, and thus rendering your project closed-source will likely cause considerable sanctions on their behalf. Honestly, we tried it ourselves - it didn't work, and Byond administration officially disabled one of our servers for violation of licensing terms - don't repeat our mistakes.
 
-**Please carefully read the following statement:**
-
-If you desire to host your own server based of Fallout 13 source code - you may not pretend to be an "Official Fallout 13" community.
-
-*The only Fallout 13 communities that are considered official at the moment are specified as:*
-
-1. [EN] Fallout 13 - Vault One
-2. [RU] Fallout 13 - CBET ATOMA ( Light of the Atom )
-
-**By our terms and conditions we require any potential host to specify that they are an unofficial server in announcements and the Byond HUB.**
-
-Stated terms of service fully comply with the original AGPL v3 license of /tg/ Station 13, as long as this applies to the running server of unofficial community.
-
-##Credits
+##Jackerzz Fallout 13 original Credits
 
 **Code:**
 
@@ -64,12 +46,10 @@ http://www.mediafire.com/download/fdlmc67zwwyw26d/Fallout13OST.zip
 
 ##Disclaimer
 
-**Note: This is not associated with Bethesda Softworks in any way! Fallout 13 is neither a trademark, nor a commercial product.
-2017 Bethesda Softworks LLC. Trademarks belong to their respective owners.**
-
 ##LICENSE
 
-**Fallout 13 is based of /tg/ Station 13 source code and thus is licensed and distributed accordingly.**
+
+**Cataclysm 13 is based of of Jackerzz Fallout 13, which is based of /tg/ Station 13 source code and thus is licensed and distributed accordingly.**
 
 All source code of /tg/ Station 13 after commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST (https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under GNU AGPL v3 (http://www.gnu.org/licenses/agpl-3.0.html).
 
