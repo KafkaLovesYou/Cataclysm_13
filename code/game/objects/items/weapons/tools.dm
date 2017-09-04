@@ -667,6 +667,13 @@
 	icon_state = "crowbar_red"
 	force = 15
 
+/obj/item/weapon/crowbar/makeshift
+	name = "makeshift crowbar"
+	icon_state = "crowbar_brass"
+	force = 5
+	throwforce = 5
+	toolspeed = 0.5
+
 /obj/item/weapon/crowbar/brass
 	name = "brass crowbar"
 	desc = "A brass crowbar. It feels faintly warm to the touch."

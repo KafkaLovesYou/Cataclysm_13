@@ -190,3 +190,8 @@
 	name = "dirty mattress"
 	desc = "An awfully smelly, dirty mattress.<br>It has soaked with something foul, so now it smells worse than a ghoul's piss..."
 	icon_state = pick("mattress_dirty","mattress_bloody","mattress_dried","mattress_mossy")
+
+/obj/structure/bed/cot
+	name = "cot"
+	desc = "A simple contraption for sleeping. Simple - and uncomfortable."
+	icon_state = "cot"

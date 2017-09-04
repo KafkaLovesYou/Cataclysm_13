@@ -112,7 +112,7 @@
 ////////////
 /obj/item/weapon/storage/fancy/cigarettes
 	name = "Big Boss Cigarettes"
-	desc = "A small box containing pre-War cigarettes.<br>Its valued by merchants for moderate rarity, solid quality and high demand.<br>This box is labeled with the name of a brand or company, \"Big Boss\" .<br>An image of a snake is seen on both sides of the box."
+	desc = "A small box containing top class cigarettes."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "cig"
 	item_state = "cigpacket"
@@ -232,7 +232,7 @@
 
 /obj/item/weapon/storage/fancy/cigarettes/cigpack_myron
 	name ="Myron's Patented Cigarettes"
-	desc = "Is your weight slowing you down? Having trouble running away from hungry geckos? Can't stop stuffing your mouth with pre-War junk food? Smoke Myron's Patented Cigarettes and watch all the troubles burn away. Guaranteed results!"
+	desc = "Is your weight slowing you down? Having trouble running away from hungry geckos? Can't stop stuffing your mouth with junk food? Smoke Myron's Patented Cigarettes and watch all the troubles burn away. Guaranteed results!"
 	icon_state = "myron"
 
 /obj/item/weapon/storage/fancy/cigarettes/cigpack_myron/New()

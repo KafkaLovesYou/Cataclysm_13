@@ -87,15 +87,28 @@
 			user.visible_message("<span class='notice'>[user] [anchored ? "fastens" : "unfastens"] [src].</span>", \
 								 "<span class='notice'>You [anchored ? "fasten [src] to" : "unfasten [src] from"] the floor.</span>")
 			return
-	else if(istype(W, /obj/item/stack/rods) && broken)
+//Fence making?
+/*	else if(istype(W, /obj/item/stack/rods))
 		var/obj/item/stack/rods/R = W
-		if(!shock(user, 90))
-			user.visible_message("<span class='notice'>[user] rebuilds the broken grille.</span>", \
-								 "<span class='notice'>You rebuild the broken grille.</span>")
-			new grille_type(src.loc)
-			R.use(1)
-			qdel(src)
-			return
+		if (broken)
+			if(!shock(user, 90))
+				user.visible_message("<span class='notice'>[user] rebuilds the broken grille.</span>", \
+									 "<span class='notice'>You rebuild the broken grille.</span>")
+				new grille_type(src.loc)
+				R.use(1)
+				qdel(src)
+				return
+		else
+			if (R.get_amount() < 6)
+				to_chat(user, "<span class='warning'>You need six rods to make a fence!</span>")
+				return
+			else
+				R.use(6)
+				var/obj/structure/fence/F = new (loc)
+				transfer_fingerprints_to(F)
+				F.update_icon()
+				qdel(src)
+				return*/
 
 //window placing begin
 	else if(istype(W, /obj/item/stack/sheet/rglass) || istype(W, /obj/item/stack/sheet/glass))

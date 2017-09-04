@@ -160,3 +160,25 @@
 	name = "shrine"
 	desc = "A shrine dedicated to a deity."
 	icon_state = "shrine"
+
+
+
+/obj/structure/fluff/bell_broken
+	name = "broken bell"
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "bell"
+	desc = "A big, broken bell. Probably used as a church or alarm bell."
+	density = 1
+	anchored = 1
+
+/obj/structure/fluff/bell_broken/attackby(obj/item/W, mob/user, params)
+	if (istype(W, /obj/item/weapon/weldingtool))
+		var/obj/item/weapon/weldingtool/WT = W
+
+		if(WT.remove_fuel(0,user))
+			new /obj/item/stack/sheet/metal(src.loc)
+			new /obj/item/stack/sheet/metal(src.loc)
+			new /obj/item/stack/sheet/metal(src.loc)
+			user.visible_message("[user.name] shaped [src] into metal with the welding tool.", \
+						 "<span class='notice'>You shape [src] into metal with the welding tool.</span>", \
+						 "<span class='italics'>You hear welding.</span>")

@@ -5,7 +5,7 @@
 	desc = "A metal container with something in it.<br>By the looks of it, it was manufactured recently."
 	icon = 'icons/fallout/objects/structures/trash.dmi'
 	icon_state = "single"
-	tank_volume = 500
+	tank_volume = 1000
 	reagent_id = "stablemutationtoxin"
 	self_weight = 200
 
@@ -13,7 +13,7 @@
 	name = "waste barrel"
 	desc = "A rather odd-looking metal barrel, made of strange metal that somehow hasn't rusted after all this time.<br>There is a strange label on it, but you can't quite make it out..."
 	icon_state = "dangerous"
-	tank_volume = 500
+	tank_volume = 1000
 	reagent_id = "radium"
 	rad_heavy_range = 1
 	rad_light_range = 4
@@ -34,12 +34,12 @@
 	name = "fuel barrel"
 	desc = "A rather odd-looking metal barrel, made of strange metal that somehow hasn't rusted after all this time.<br>There is a label on it, with a drawing of flames.<br>You wonder if there is anything left in it..."
 	icon_state = "explosive"
-	tank_volume = 500
+	tank_volume = 1000
 	reagent_id = "welding_fuel"
 	self_weight = 200
 
 /obj/structure/reagent_dispensers/barrel/explosive/boom()
-	explosion(get_turf(src), 0, 1, tank_volume/200, flame_range = tank_volume/200)
+	explosion(get_turf(src), 0, 1, tank_volume/200, flame_range = tank_volume/250)
 	qdel(src)
 
 /obj/structure/reagent_dispensers/barrel/explosive/blob_act(obj/structure/blob/B)
@@ -59,7 +59,7 @@
 	name = "old barrel"
 	desc = "An old barrel. Oddly enough, it stands undamaged after all this time.<br>You wonder if there is anything left in it."
 	icon_state = "one_b"
-	tank_volume = 500
+	tank_volume = 1000
 	reagent_id = "water"
 	self_weight = 200
 
@@ -67,7 +67,7 @@
 	name = "two old barrels"
 	desc = "A couple of old barrels. Oddly enough, they stand undamaged after all this time.<br>You wonder if there is anything left in these."
 	icon_state = "two_b"
-	tank_volume = 1000
+	tank_volume = 1500
 	reagent_id = "lube"
 	anchored = 1
 	self_weight = 400
@@ -76,7 +76,7 @@
 	name = "three old barrels"
 	desc = "Ancient containers with something inside of them. Or are they empty? Actually, how would you know that..."
 	icon_state = "three_b"
-	tank_volume = 1500
+	tank_volume = 3000
 	reagent_id = "water"
 	anchored = 1
 	self_weight = 600
@@ -85,7 +85,17 @@
 	name = "four old barrels"
 	desc = "Ancient containers with something inside of them. Or are they empty? Actually, that's a lot of barrels standing in a single spot..."
 	icon_state = "four_b"
-	tank_volume = 800
+	tank_volume = 3500
 	reagent_id = "mutagen"
 	anchored = 1
 	self_weight = 60
+
+/obj/structure/reagent_dispensers/barrel/four/New()
+	reagent_id = pick("mutagen","lube","welding_fuel","water","water","water","water","water","stablemutationtoxin")
+	..()
+/obj/structure/reagent_dispensers/barrel/three/New()
+	reagent_id = pick("mutagen","lube","welding_fuel","water","water","water","water","stablemutationtoxin")
+	..()
+/obj/structure/reagent_dispensers/barrel/two/New()
+	reagent_id = pick("mutagen","lube","welding_fuel","water","water","water","stablemutationtoxin")
+	..()

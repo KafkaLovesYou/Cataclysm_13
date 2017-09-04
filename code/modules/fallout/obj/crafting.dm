@@ -111,8 +111,8 @@
 	icon_state = "duct_tape"
 
 /obj/item/crafting/wonderglue
-	name = "wonder glue"
-	desc = "A pre-War brand of glue that has retained its adhesive qualities.<br>A glue itself is a liquid acrylic adhesive, meant to fix broken plastics and ceramics or used in the assembly of a great assortment of items."
+	name = "glue"
+	desc = "A tube of glue that has retained its adhesive qualities.<br>A glue itself is a liquid acrylic adhesive, meant to fix broken plastics and ceramics or used in the assembly of a great assortment of items."
 	icon_state = "wonderglue1"
 
 /obj/item/crafting/wonderglue/initialize()
@@ -125,8 +125,8 @@
 	icon_state = "turpentine"
 
 /obj/item/crafting/abraxo
-	name = "abraxo"
-	desc = "A pre-War cleaning agent produced by Abraxodyne Chemical."
+	name = "bleach"
+	desc = "A cleaning agent."
 	icon_state = "abraxo"
 
 /obj/item/crafting/reloader
@@ -148,3 +148,28 @@
 	name = "proximity sensor"
 	desc = "Used for scanning and alerting when someone enters a certain proximity."
 	icon_state = "sensor"
+
+/obj/item/stack/barbedwire
+	name = "barbed wire"
+	desc = "It's worth 1 credit."
+	singular_name = "bill"
+	icon = 'icons/fallout/objects/items.dmi'
+	icon_state = "barbwire_coil"
+	amount = 1
+	max_amount = 15
+	throwforce = 5
+	force = 8
+	throw_speed = 2
+	throw_range = 3
+	w_class = WEIGHT_CLASS_TINY
+	resistance_flags = FIRE_PROOF
+	flags = CONDUCT
+
+/obj/item/stack/barbedwire/fifty/New()
+	..()
+	max_amount = 50
+	amount = 50
+
+/obj/item/stack/barbedwire/New()
+	..()
+	amount = rand(1,10)

@@ -20,6 +20,7 @@
 /obj/vehicle/fuel/motorcycle/buggy/New()
 	..()
 	name = pick(names)
+	fuel = rand(200,750)
 
 /obj/item/key/buggy
 	name = "car key"

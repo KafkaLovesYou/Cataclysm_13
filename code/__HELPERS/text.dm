@@ -652,3 +652,12 @@ proc/FormatText(text, list/data)
 			return "<b>[text_macro.Replace(rest, /proc/replace_text_macro)]</b>"
 		else
 			return text_macro.Replace(rest, /proc/replace_text_macro)
+
+
+//random string generator, for locks
+/proc/generateRandomString(var/length)
+	. = list()
+	for(var/a in 1 to length)
+		var/letter = rand(33,126)
+		. += ascii2text(letter)
+	. = jointext(.,null)

@@ -1,6 +1,6 @@
 /obj/structure/ladder
 	name = "ladder"
-	desc = "A sturdy metal ladder."
+	desc = "A metal ladder."
 	icon = 'icons/fallout/objects/structures/stationary.dmi'
 	icon_state = "ladder_middle"
 	anchored = 1
@@ -9,10 +9,63 @@
 	var/height = 0							//the 'height' of the ladder. higher numbers are considered physically higher
 	var/obj/structure/ladder/down = null	//the ladder below this one
 	var/obj/structure/ladder/up = null		//the ladder above this one
+	var/opened = TRUE						//if the "associated hatch" is open or not, mostly used for manholes
 
 /obj/structure/ladder/unbreakable //mostly useful for awaymissions to prevent halting progress in a mission
-	name = "sturdy ladder"
-	desc = "An extremely sturdy metal ladder."
+	name = "ladder"
+	desc = "An sturdy metal ladder."
+
+
+
+/obj/structure/ladder/unbreakable/stairs
+	name = "staircase"
+	icon_state = "stairs"
+	desc = ""
+	//density = 1
+
+/obj/structure/ladder/unbreakable/stairs/New()
+	if(up && down)
+		desc = "(Click to walk up or down)"
+	else if(up)
+		desc = "(Click to walk up)"
+	else if(down)
+		desc = "(Click to walk down)"
+	else
+		desc = "Looks like it's broken."
+/obj/structure/ladder/unbreakable/stairs/update_icon() //so we don't botch our icons
+	return
+
+/obj/structure/ladder/unbreakable/manhole
+	name = "manhole"
+	opened = FALSE
+	icon_state = "manhole_c"
+
+/obj/structure/ladder/unbreakable/manhole/update_icon()
+	if(opened)
+		icon_state = "manhole_o"
+	else
+		icon_state = "manhole_c"
+
+/obj/structure/ladder/unbreakable/manhole/attackby(obj/item/weapon/W, mob/user, params)
+	if(istype(/obj/item/weapon/crowbar, W))
+		if(opened)
+			to_chat(user, "<span class='notice'>You close the cover of \the [src].</span>")
+		else if(!opened)
+			to_chat(user, "<span class='notice'>You open the cover of \the [src].</span>")
+		opened = !opened
+		src.update_icon()
+	else
+		if(opened)
+			if(up)
+				if(up.opened)
+					return attack_hand(user)
+				else
+					to_chat(user, "<span class='notice'>\The manhole is covered.</span>")
+			else
+				return attack_hand(user)
+		else
+			to_chat(user, "<span class='notice'>\The manhole is covered.</span>")
+
 
 
 /obj/structure/ladder/initialize()
@@ -57,17 +110,37 @@
 
 /obj/structure/ladder/proc/use(mob/user,is_ghost=0)
 	if(up && down)
-		switch( alert("Go up or down the ladder?", "Ladder", "Up", "Down", "Cancel") )
+		switch( alert("Go up or down \the [src]?", "[src]", "Up", "Down", "Cancel") )
 			if("Up")
-				go_up(user,is_ghost)
+				if(up.opened && opened) //continually checking if the associated manhole is uncovered
+					go_up(user,is_ghost)
+				else if (!opened)
+					to_chat(user, "<span class='notice'>\The manhole is covered.</span>")
+				else
+					to_chat(user, "<span class='notice'>\The manhole above is covered.</span>")
 			if("Down")
-				go_down(user,is_ghost)
+				if(down.opened && opened)
+					go_down(user,is_ghost)
+				else if (!opened)
+					to_chat(user, "<span class='notice'>\The manhole is covered.</span>")
+				else
+					to_chat(user, "<span class='notice'>\The manhole below is covered.</span>")
 			if("Cancel")
 				return
 	else if(up)
-		go_up(user,is_ghost)
+		if(up.opened && opened)
+			go_up(user,is_ghost)
+		else if (!opened)
+			to_chat(user, "<span class='notice'>\The manhole is covered.</span>")
+		else
+			to_chat(user, "<span class='notice'>\The manhole above is covered.</span>")
 	else if(down)
-		go_down(user,is_ghost)
+		if(down.opened && opened)
+			go_down(user,is_ghost)
+		else if (!opened)
+			to_chat(user, "<span class='notice'>\The manhole is covered.</span>")
+		else
+			to_chat(user, "<span class='notice'>\The manhole below is covered.</span>")
 	else
 		to_chat(user, "<span class='warning'>[src] doesn't seem to lead anywhere!</span>")
 

@@ -185,7 +185,7 @@
 
 /obj/item/clothing/suit/armor/f13/leglegate
 	name = "legate armor"
-	desc = "The armor appears to be a full suit of heavy-gauge steel and offers full body protection.<br>The armor itself bears numerous battle scars.<br>The Legate's suit appears originally crafted, in contrast to other Legion armor which consists of repurposed pre-War sports equipment."
+	desc = "The armor appears to be a full suit of heavy-gauge steel and offers full body protection.<br>The armor itself bears numerous battle scars.<br>The Legate's suit appears originally crafted, in contrast to other Legion armor which consists of repurposed sports equipment."
 	icon_state = "leglegate"
 	item_state = "leglegate"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -197,7 +197,7 @@
 
 /obj/item/clothing/suit/armor/f13/combat_mk1
 	name = "reinforced combat armor mark I"
-	desc = "An advanced and expensive pre-War model of combat armor made of complex alloys.<br>It was common for all types of troops before the implementation of reinforced combat armor mark II"
+	desc = "An advanced and expensive model of combat armor made of complex alloys.<br>It was common for all types of troops before the implementation of reinforced combat armor mark II"
 	icon_state = "combat_mk1"
 	item_state = "combat_mk1"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
@@ -209,7 +209,7 @@
 
 /obj/item/clothing/suit/armor/f13/combat_mk2
 	name = "reinforced combat armor mark II"
-	desc = "An improved version of pre-War reinforced combat armor - designed to replace it, this high tech suit was created as a lightweight, more protective set reserved for use by American shock troops and special forces."
+	desc = "An improved version of reinforced combat armor - designed to replace it, this high tech suit was created as a lightweight, more protective set reserved for use by American shock troops and special forces."
 	icon_state = "combat_mk2"
 	item_state = "combat_mk2"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
@@ -221,7 +221,7 @@
 
 /obj/item/clothing/suit/armor/f13/ncr
 	name = "trooper armor"
-	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons, and gauntlets. Worn by NCR troops in combat environments.<br>It's attached via leather straps and buckles."
+	desc = "A set of trooper armor that consists of an armored breastplate, metal pauldrons, and gauntlets.<br>It's attached via leather straps and buckles."
 	icon_state = "ncr_armor1"
 	item_state = "ncr_armor1"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
@@ -233,25 +233,25 @@
 
 /obj/item/clothing/suit/armor/f13/ncr/soldier
 	name = "standard issue trooper armor"
-	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons, and gauntlets, worn by NCR soldiers in combat environments.<br>This one has had its breastplate emblazoned with the emblem of the NCR, that has slightly faded over time."
+	desc = "A set of trooper armor that consists of an armored breastplate, metal pauldrons, and gauntlets, worn by NCR soldiers in combat environments.<br>This one has had its breastplate emblazoned with the emblem of the NCR, that has slightly faded over time."
 	icon_state = "ncr_armor2"
 	item_state = "ncr_armor2"
 
 /obj/item/clothing/suit/armor/f13/ncr/patriot
 	name = "trooper armor of \"Patriot\" battalion"
-	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR patriots in combat environments.<br>This one has a five-pointed star painted over the chestplate with white paint - it must be a battalion insignia."
+	desc = "A set of trooper armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR patriots in combat environments.<br>This one has a five-pointed star painted over the chestplate with white paint - it must be a battalion insignia."
 	icon_state = "ncr_armor3"
 	item_state = "ncr_armor3"
 
 /obj/item/clothing/suit/armor/f13/ncr/commie
 	name = "trooper armor of \"Commie\" battalion"
-	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR comrades in combat environments.<br>This one has a five-pointed star painted over the chestplate with red paint - it must be a battalion insignia."
+	desc = "A set of trooper armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR comrades in combat environments.<br>This one has a five-pointed star painted over the chestplate with red paint - it must be a battalion insignia."
 	icon_state = "ncr_armor4"
 	item_state = "ncr_armor4"
 
 /obj/item/clothing/suit/armor/f13/ncr/preacher
 	name = "trooper armor of \"Preacher\" battalion"
-	desc = "A set of NCR armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR zealots in combat environments.<br>This one has a holy cross painted over the chestplate with yellow paint - it must be a battalion insignia."
+	desc = "A set of trooper armor that consists of an armored breastplate, metal pauldrons and gauntlets, worn by NCR zealots in combat environments.<br>This one has a holy cross painted over the chestplate with yellow paint - it must be a battalion insignia."
 	icon_state = "ncr_armor5"
 	item_state = "ncr_armor5"
 
@@ -315,7 +315,7 @@
 
 /obj/item/clothing/suit/armor/f13/battlecoat //Maxson's battlecoat from Fallout 4
 	name = "battlecoat"
-	desc = "A heavy padded leather coat, worn by pre-War bomber pilots in the past and post-War zeppelin pilots in the future."
+	desc = "A heavy padded leather coat, worn by bomber pilots in the past and post-War zeppelin pilots in the future."
 	icon_state = "battlecoat"
 	item_state = "battlecoat"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
@@ -354,7 +354,7 @@
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	name = "T-51b power armor"
-	desc = "A mass-produced pinnacle of pre-War engineering.<br>Developed in the laboratories of the West Tek Research Facility, the T-51b was deployed at the end of the Anchorage Reclamation, and by January 2077, the armor had become standard issue for American soldiers in the Army's Mechanized Cavalry Regiments."
+	desc = "A mass-produced pinnacle of engineering.<br>Developed in the laboratories of the West Tek Research Facility, the T-51b was deployed at the end of the Anchorage Reclamation, and by January 2077, the armor had become standard issue for American soldiers in the Army's Mechanized Cavalry Regiments."
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
 	armor = list(melee = 70, bullet = 50, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 70, fire = 60, acid = 60)

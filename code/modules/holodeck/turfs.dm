@@ -37,6 +37,7 @@
 /turf/open/floor/holofloor/beach/water
 	name = "water"
 	icon_state = "water"
+	density = 1
 
 /turf/open/floor/holofloor/asteroid
 	name = "asteroid"

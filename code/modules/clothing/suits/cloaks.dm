@@ -22,6 +22,21 @@
 	user.visible_message("<span class='suicide'>[user] is strangling [user.p_them()]self with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return(OXYLOSS)
 
+/obj/item/clothing/neck/cloak/fireblanket
+	name = "thermal blanket"
+	desc = "A metallicized blanket, used in crisis situations."
+	icon_state = "firecloak"
+	flags = STOPSPRESSUREDMAGE | THICKMATERIAL
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	resistance_flags = FIRE_PROOF
+	flags_inv = HIDEJUMPSUIT
+	strip_delay = 60
+	put_on_delay = 100
+	body_parts_covered = CHEST|GROIN|LEGS
+
 /obj/item/clothing/neck/cloak/hos
 	name = "head of security's cloak"
 	desc = "Worn by Securistan, ruling the station with an iron fist. It's slightly armored."

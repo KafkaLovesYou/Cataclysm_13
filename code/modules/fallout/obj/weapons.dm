@@ -29,6 +29,22 @@
 	block_chance = 20
 	sharpness = IS_SHARP
 
+/obj/item/weapon/lawnmowerblade
+	name = "\proper lawn mower blade"
+	desc = "Someone picked this out of a lawn mower"
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "machete"
+	item_state = "machete"
+	flags = CONDUCT
+	slot_flags = SLOT_BELT
+	force = 15
+	throwforce = 15
+	w_class = 3
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+	block_chance = 0
+	sharpness = IS_SHARP
+
 /obj/item/weapon/pipe
 	name = "lead pipe"
 	desc = "One of the ends has tape wrapped around it to improve grip, while the other is heavily corroded and/or bloodstained, and topped with a pipe fitting.<br>Though it has a short reach, it has decent damage and a fast swing."
@@ -190,6 +206,25 @@
 	sharpness = IS_SHARP
 	obj_integrity = 200
 	max_integrity = 200
+
+/obj/item/weapon/woodspike
+	name = "woodenspike"
+	desc = "A rather deadly weapon of an ancient design."
+	icon = 'icons/fallout/objects/melee.dmi'
+	icon_state = "spike"
+	force = 6
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = SLOT_BACK
+	throwforce = 25
+	throw_speed = 3
+	embedded_impact_pain_multiplier = 2
+	armour_penetration = 6
+	materials = list(MAT_WOOD=1000)
+	hitsound = 'sound/weapons/bladeslice.ogg'
+	attack_verb = list("attacked", "poked", "jabbed", "torn", "gored")
+	sharpness = IS_SHARP
+	obj_integrity = 100
+	max_integrity = 100
 
 /obj/item/weapon/hammer
 	name = "hammer"

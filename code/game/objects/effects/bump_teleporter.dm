@@ -32,3 +32,14 @@ var/list/obj/effect/bump_teleporter/BUMP_TELEPORTERS = list()
 		if(BT.id == src.id_target)
 			usr.forceMove(BT.loc	)//Teleport to location with correct id.
 			return
+
+
+
+/obj/effect/ant_teleporter/initialize()
+	x = rand(250,290)
+	y = rand(90,200)
+	var/obj/effect/bump_teleporter/BT = new /obj/effect/bump_teleporter(src.loc)
+	BT.id = "anthill_outside"
+	BT.id_target = "anthill_inside"
+	//new /obj/structure/anthill
+	qdel(src)

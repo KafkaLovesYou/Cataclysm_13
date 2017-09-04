@@ -210,3 +210,22 @@ var/global/list/datum/stack_recipe/sinew_recipes = list ( \
 			HS.amount = 1
 			wetness = initial(wetness)
 			src.use(1)
+
+
+//Soil here bc I needed a soil recipe and I didn't want to bother with crafting
+var/global/list/datum/stack_recipe/soil_recipe = list (new/datum/stack_recipe("soil mound", /obj/machinery/hydroponics/soil, 5, time = 10, one_per_turf = 1, on_floor = 0) )
+
+/obj/item/stack/soil
+	name = "soil"
+	desc = "Dirt and compost."
+	singular_name = "soil"
+	icon = 'icons/obj/hydroponics/equipment.dmi'
+	icon_state = "soil_small"
+	origin_tech = "materials=1;biotech=1" //meh?
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 50, acid = 0)
+	resistance_flags = FIRE_PROOF
+	merge_type = /obj/item/stack/soil
+
+/obj/item/stack/soil/New(var/loc, var/amount=null)
+	recipes = soil_recipe
+	return ..()

@@ -31,6 +31,7 @@
 	var/auto_close //TO BE REMOVED, no longer used, it's just preventing a runtime with a map var edit.
 	var/datum/effect_system/spark_spread/spark_system
 	var/damage_deflection = 10
+	var/unlock_data = 0
 
 /obj/machinery/door/New()
 	..()
@@ -60,7 +61,7 @@
 	//return
 
 /obj/machinery/door/Bumped(atom/AM)
-	if(operating || emagged)
+	if(operating || emagged || unlock_data != 0)
 		return
 	if(ismob(AM))
 		var/mob/B = AM
@@ -158,6 +159,15 @@
 	else if(!(I.flags & NOBLUDGEON) && user.a_intent != INTENT_HARM)
 		try_to_activate_door(user)
 		return 1
+	else if(istype(I, /obj/item/weapon/lock_construct))
+		var/obj/item/weapon/lock_construct/L = I
+		if(!density)
+			close()
+		unlock_data = L.lock_data
+	else if(istype(I, /obj/item/weapon/key))
+		var/obj/item/weapon/key/K = I
+		if (unlock_data == K.key_data)
+			unlock_data = 0
 	else
 		return ..()
 

@@ -68,20 +68,17 @@
 		/obj/item/device/flashlight/torch,
 		// Weapons
 		/obj/item/weapon/pipe,
-		/obj/item/weapon/tireiron,
 		/obj/item/weapon/pan,
-		/obj/item/weapon/kitchen/rollingpin,
-		/obj/item/weapon/kitchen/knife,
-		/obj/item/weapon/kitchen/knife/butcher,
-		/obj/item/weapon/scalpel,
-		/obj/item/weapon/shovel,
-		/obj/item/weapon/hammer,
-		/obj/item/weapon/crowbar,
-		/obj/item/weapon/screwdriver,
-		/obj/item/weapon/wirecutters,
-		/obj/item/weapon/wrench,
-		/obj/item/weapon/weldingtool/experimental,
-		/obj/item/weapon/restraints/legcuffs/bola
+		/obj/item/weapon/kitchen/knife/pocket,
+		///obj/item/weapon/scalpel,
+		//obj/item/weapon/shovel,
+		//obj/item/weapon/hammer,
+		/obj/item/weapon/crowbar/makeshift,
+		//obj/item/weapon/screwdriver,
+		//obj/item/weapon/wirecutters,
+		//obj/item/weapon/wrench,
+		//obj/item/weapon/weldingtool/experimental,
+		//obj/item/weapon/restraints/legcuffs/bola
 		)
 	price = -1
 
@@ -98,7 +95,7 @@
 		/obj/item/clothing/mask/cigarette/cigar,
 		/obj/item/clothing/mask/cigarette/cigar/cohiba,
 		/obj/item/clothing/mask/cigarette/cigar/havana,
-		/obj/item/weapon/lighter
+		//obj/item/weapon/lighter
 		)
 	price = 60
 
@@ -134,11 +131,11 @@
 		/obj/item/clothing/under/f13/machinist,
 		// Suits
 		/obj/item/clothing/suit/f13/puffer,
-		/obj/item/clothing/suit/toggle/labcoat/f13/wanderer
+		//obj/item/clothing/suit/toggle/labcoat/f13/wanderer
 		)
 	price = 120
 
-/datum/content_pack/vault13
+/*/datum/content_pack/vault13
 	name = "Vault 13"
 	id = "vault13"
 	desc = "<b>Available to: Neutral, City and Raider factions only!</b><br>Vault 13 has opened long time ago, now you can try and pretend your relatives actually lived there, or explain that you got frozen in time somehow - that's why items you got, look so pristine.</i>"
@@ -354,3 +351,5 @@
 
 	on_set(client/client)
 		client.add_race("glowing ghoul", /datum/species/ghoul/glowing)
+
+*/

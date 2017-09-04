@@ -1,7 +1,7 @@
 //Fallout 13 City faction roles
 
 /datum/job/mayor
-	title = "Mayor"
+	title = "Shelter representative"
 	desc = "A trustworthy authority.<br>You were chosen to guide them, now you have to choose: carrot or stick."
 	flag = MAYOR
 	department_flag = WASTELAND
@@ -60,7 +60,7 @@
 	)
 
 /datum/outfit/job/mayor
-	name = "Mayor"
+	name = "Representative"
 	backpack = null
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/formal
@@ -128,10 +128,10 @@
 //Citizen
 
 /datum/job/citizen
-	title = "Citizen"
+	title = "Shelter dweller"
 	flag = CITIZEN
 	department_flag = ENGSEC
-	desc = "A City dweller.<br>You live a better life than most Wastelanders will ever have."
+	desc = "A shelter dweller.<br>You live a better life than most Wastelanders will ever have."
 	faction = "city"
 	status = "member"
 	total_positions = 10
@@ -165,7 +165,7 @@
 	)
 
 /datum/outfit/job/citizen
-	name = "Citizen"
+	name = "Sheltered"
 	backpack = null
 	satchel = null
 	uniform = /obj/item/clothing/under/f13/cowboyt

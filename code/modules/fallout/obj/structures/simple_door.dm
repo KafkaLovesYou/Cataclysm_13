@@ -28,6 +28,7 @@
 	var/close_sound = 'sound/machines/door_close.ogg'
 	var/opening_time = 2
 	var/closing_time = 4
+	var/unlock_data = 0
 
 /obj/structure/simple_door/New(location)
 	..()
@@ -94,7 +95,37 @@
 		playsound(loc, 'sound/items/Screwdriver.ogg', 25, -3)
 		qdel(src)
 		return
-	attack_hand(user)
+	//Lock door
+	if(istype(I, /obj/item/weapon/lock_construct))
+		var/obj/item/weapon/lock_construct/L = I
+		if (unlock_data == 0) //if the door is not locked
+			if(L.ispaired == 0) //if the lock has no key
+				to_chat(user, "<span class='warning'>\The [L.name] has no key.</span>")
+				return
+			if(!density)
+				Close(10)
+			unlock_data = L.lock_data
+			playsound(loc, 'sound/f13items/flashlight_on.ogg', 50, -3)
+			to_chat(user, "<span class='notice'>You lock \the [name].</span>")
+			qdel(L)
+		else //if the door IS locked
+			to_chat(user, "<span class='warning'>It's already locked.</span>")
+	//unlock door
+	if(istype(I, /obj/item/weapon/key))
+		var/obj/item/weapon/key/K = I
+		if (unlock_data == K.key_data)
+			var/obj/item/weapon/lock_construct/N = new /obj/item/weapon/lock_construct (get_turf(src.loc))
+			N.lock_data = K.key_data
+			N.ispaired = 1
+			unlock_data = 0
+			usr.put_in_hands(N)
+			playsound(loc, 'sound/f13items/flashlight_off.ogg', 50, -3)
+			to_chat(user, "<span class='notice'>You unlock \the [name].</span>")
+		else if(unlock_data != 0)
+			playsound(loc, 'sound/machines/door_locked.ogg', 25, -3)
+			to_chat(user, "<span class='warning'>Wrong [K.name]!</span>")
+	if(!istype(I,/obj/item/stack/sheet/mineral/wood) && !istype(I, /obj/item/weapon/screwdriver) && !istype(I, /obj/item/weapon/lock_construct) && !istype(I, /obj/item/weapon/key))
+		attack_hand(user)
 
 /obj/structure/simple_door/proc/TryToSwitchState(atom/user, animate)
 	if(moving)
@@ -103,6 +134,10 @@
 		var/mob/living/M = user
 		if(/obj/structure/barricade in src.loc)
 			M << "It won't budge!"
+			return 0
+		if (unlock_data != 0)
+			playsound(loc, 'sound/machines/door_locked.ogg', 25, -3)
+			to_chat(user, "<span class='warning'>\The [name] is locked!</span>")
 			return 0
 		if(M.client)
 			if(iscarbon(M))
@@ -119,7 +154,7 @@
 	return 0
 
 /obj/structure/simple_door/attack_hand(mob/user)
-	if(TryToSwitchState(user, 1) && !density)
+	if(TryToSwitchState(user, 1) && !density && unlock_data == 0)
 		manual_opened = 1
 
 
@@ -254,14 +289,49 @@
 	material_type = /obj/item/stack/sheet/plasteel
 	open_sound = "sound/f13machines/doorblast_open.ogg"
 	close_sound = "sound/f13machines/doorblast_close.ogg"
-	explosion_block = 10
+	explosion_block = 2000
 	hard_open = 0
 	opening_time = 30
 	closing_time = 20
+	density = 1
+	var/pass_id = ""
+	var/locked = TRUE
 
-/obj/structure/simple_door/bunker
+
+
+/obj/structure/simple_door/blast/attack_hand(mob/user)
+	if(locked)
+		to_chat(user, "<span class='warning'>\The [name] is locked!</span>")
+	else
+		..()
+
+/obj/structure/simple_door/blast/attack_tk(mob/user)
+	if(locked)
+		to_chat(user, "<span class='warning'>\The [name] is locked!</span>")
+	else
+		..()
+
+/obj/structure/simple_door/blast/attackby(obj/item/weapon/I, mob/living/user, params)
+	if(locked)
+		if(istype(I,/obj/item/weapon/card/emag))
+			if(pass_id == "military" && istype(I,/obj/item/weapon/card/emag/military))
+				to_chat(user, "You use [I.name]")
+				qdel(I)
+				locked = FALSE
+			else if(pass_id == "science" && istype(I,/obj/item/weapon/card/emag/science))
+				to_chat(user, "You use [I.name]")
+				qdel(I)
+				locked = FALSE
+		else
+			to_chat(user, "<span class='warning'>\The [name] is locked!</span>")
+/obj/structure/simple_door/blast/TryToSwitchState()
+	if(locked)
+		return
+	else
+		..()
+/obj/structure/simple_door/blast/bunker
 	name = "airlock"
-	desc = "An olive green painted airlock.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion.<br>This particular door looks like a pre-War military tech."
+	desc = "An olive green painted airlock.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion."
 	icon_state = "bunker"
 	door_type = "bunker"
 	material_type = /obj/item/stack/sheet/metal
@@ -270,8 +340,8 @@
 	explosion_block = 5
 	hard_open = 0
 
-/obj/structure/simple_door/bunker/glass
-	desc = "An olive green painted airlock, with semi-transparent glass window.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion.<br>This particular door looks like a pre-War military tech."
+/obj/structure/simple_door/blast/bunker/glass
+	desc = "An olive green painted airlock, with semi-transparent glass window.<br>The door mechanism itself is a complex mix of an electic engine and hydraulic motion."
 	icon_state = "bunkerglass"
 	door_type = "bunkerglass"
 	explosion_block = 4 //A glass window in it, reduces the resistance, am I right?

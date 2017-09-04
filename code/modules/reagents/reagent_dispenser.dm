@@ -25,7 +25,7 @@
 
 /obj/structure/reagent_dispensers/New()
 	create_reagents(tank_volume)
-	reagents.add_reagent(reagent_id, tank_volume)
+	reagents.add_reagent(reagent_id, rand(tank_volume*0.75,tank_volume))
 	..()
 
 /obj/structure/reagent_dispensers/examine(mob/user)
@@ -132,7 +132,7 @@
 
 
 /obj/structure/reagent_dispensers/water_cooler
-	name = "liquid cooler"
+	name = "water cooler"
 	desc = "A machine that dispenses liquid to drink."
 	icon = 'icons/obj/vending.dmi'
 	icon_state = "water_cooler"

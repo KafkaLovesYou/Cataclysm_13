@@ -18,6 +18,18 @@
 	hitsound = 'sound/weapons/taserhit.ogg'
 	range = 7
 
+/obj/item/projectile/energy/electrode/zombie
+	name = "bolt of lightning"
+	icon_state = "spark"
+	color = "#FFFF00"
+	nodamage = 1
+	stun = 3
+	weaken = 7
+	stutter = 5
+	jitter = 20
+	//hitsound = 'sound/weapons/taserhit.ogg'
+	range = 10
+
 /obj/item/projectile/energy/electrode/on_hit(atom/target, blocked = 0)
 	. = ..()
 	if(!ismob(target) || blocked >= 100) //Fully blocked by mob or collided with dense object - burst into sparks!

@@ -42,7 +42,7 @@
 
 /turf/closed/wall/f13/wood/house
 	name = "house wall"
-	desc = "A weathered pre-War house wall."
+	desc = "A weathered house wall."
 	icon = 'icons/fallout/turfs/walls/house.dmi'
 	icon_state = "house0"
 	icontype = "house"
@@ -85,7 +85,7 @@
 
 /turf/closed/wall/f13/store
 	name = "store wall"
-	desc = "A pre-War store wall made of solid concrete."
+	desc = "A wall made of solid concrete."
 	icon = 'icons/fallout/turfs/walls/store.dmi'
 	icon_state = "store0"
 	icontype = "store"
@@ -98,7 +98,7 @@
 
 /turf/closed/wall/f13/supermart
 	name = "supermart wall"
-	desc = "A pre-War supermart wall made of reinforced concrete."
+	desc = "A wall made of reinforced concrete."
 	icon = 'icons/fallout/turfs/walls/superstore.dmi'
 	icon_state = "supermart0"
 	icontype = "supermart"
@@ -159,9 +159,20 @@
 	icon = 'icons/fallout/turfs/walls.dmi'
 	icon_state = "matrix"
 
+/turf/closed/indestructible/roof
+	name = "roof"
+	desc = "The top of a house. Duh."
+	icon = 'icons/fallout/turfs/walls.dmi'
+	icon_state = "roof"
+/turf/closed/indestructible/roof/middle
+	name = "roof"
+	desc = "The top of a house. Duh."
+	icon = 'icons/fallout/turfs/walls.dmi'
+	icon_state = "roof_mid"
+
 /turf/closed/indestructible/f13/subway
 	name = "tunnel wall"
-	desc = "This wall is made of reinforced concrete.<br>Pre-War engineers knew how to build reliable things."
+	desc = "This wall is made of reinforced concrete."
 	icon = 'icons/fallout/turfs/walls/subway.dmi'
 	icon_state = "subwaytop"
 
@@ -171,7 +182,7 @@
 	icon_state = "matrix"
 
 /turf/closed/indestructible/f13/obsidian //Just like that one game studio that worked on the original game, or that block in Minecraft!
-	name = "obsidian"
+	name = "solid rock"
 	desc = "No matter what you do with this rock, there's not even a scratch left on its surface.<br><font color='#7e0707'>You shall not pass!!!</font>"
 	icon = 'icons/fallout/turfs/mining.dmi'
 	icon_state = "rock1"

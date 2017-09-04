@@ -404,6 +404,24 @@
 	beakers += B1
 	beakers += B2
 
+/obj/item/weapon/grenade/chem_grenade/boomer_gib/New()
+	..()
+	name = "bloat gland"
+	icon_state = "gib"
+	var/obj/item/weapon/reagent_containers/glass/beaker/large/B1 = new(src)
+	var/obj/item/weapon/reagent_containers/glass/beaker/large/B2 = new(src)
+
+	B1.reagents.add_reagent("condensedcapsaicin", 20)
+	B1.reagents.add_reagent("potassium", 20)
+	B2.reagents.add_reagent("phosphorus", 20)
+	B2.reagents.add_reagent("sugar", 20)
+	B2.reagents.add_reagent("facid", 50)
+
+	beakers += B1
+	beakers += B2
+
+	prime()
+
 
 /obj/item/weapon/grenade/chem_grenade/facid
 	name = "acid grenade"

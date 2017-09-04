@@ -24,3 +24,22 @@
 			M.adjustOxyLoss(-2)
 			flick("one_ring_anim", src)
 			icon_state = initial(icon_state)
+
+
+
+/obj/item/sandpaper
+	name = "sand paper"
+	desc = "Paper for sanding!"
+	icon = 'icons/fallout/objects/items.dmi'
+	icon_state = "sandpaper1"
+	throwforce = 0
+	hitsound = null
+	w_class = WEIGHT_CLASS_TINY
+	throw_speed = 1
+	throw_range = 1
+
+/obj/item/sandpaper/New()
+	..()
+	icon_state = "sandpaper[rand(1,4)]"
+	pixel_x = rand(-6, 6)
+	pixel_y = rand(0, 10)

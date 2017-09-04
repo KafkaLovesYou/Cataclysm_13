@@ -2,13 +2,52 @@
 
 //Weapons
 
+/datum/crafting_recipe/crude_crowbar
+	name = "Makeshift Crowbar"
+	result = /obj/item/weapon/crowbar/makeshift
+	reqs = list(/obj/item/stack/rods = 1)
+	time = 100
+	tools = list(/obj/item/weapon/hammer)
+	category = CAT_WEAPON
+
+/datum/crafting_recipe/rollingpin
+	name = "Rolling Pin"
+	result = /obj/item/weapon/kitchen/rollingpin
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 1, /obj/item/sandpaper = 1)
+	time = 75
+	tools = list(/obj/item/weapon/kitchen/knife)
+	category = CAT_WEAPON
+
+/datum/crafting_recipe/baseballbat
+	name = "Wooden Bat"
+	result = /obj/item/weapon/melee/baseball_bat/normalbat
+	reqs = list(/obj/item/weapon/grown/log/tree = 1, /obj/item/sandpaper = 1)
+	time = 100
+	tools = list(/obj/item/weapon/kitchen/knife)
+	category = CAT_WEAPON
+
+/datum/crafting_recipe/spikedbat
+	name = "Spiked Bat"
+	result = /obj/item/weapon/melee/baseball_bat/spikedbat
+	reqs = list(/obj/item/weapon/melee/baseball_bat/normalbat = 1, /obj/item/stack/nails = 10)
+	time = 50
+	tools = list(/obj/item/weapon/hammer)
+	category = CAT_WEAPON
+
+/datum/crafting_recipe/barbedbat
+	name = "Barbed Bat"
+	result = /obj/item/weapon/melee/baseball_bat/barbedbat
+	reqs = list(/obj/item/weapon/melee/baseball_bat/normalbat = 1, /obj/item/stack/barbedwire = 1)
+	time = 50
+	category = CAT_WEAPON
+
 /datum/crafting_recipe/spear
 	name = "Spear"
 	result = /obj/item/weapon/twohanded/tribal_spear
 	reqs = list(/obj/item/crafting/duct_tape = 1,
 				/obj/item/weapon/kitchen/knife = 1,
-				/obj/item/weapon/grown/log = 1)
-	time = 200
+				/obj/item/weapon/grown/log/tree = 1)
+	time = 165
 	category = CAT_WEAPON
 
 /datum/crafting_recipe/throwing_spear
@@ -19,11 +58,51 @@
 	tools = list(/obj/item/weapon/weldingtool)
 	category = CAT_WEAPON
 
+/datum/crafting_recipe/wood_spike
+	name = "Wooden Spike"
+	result = /obj/item/weapon/woodspike
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 1, /obj/item/sandpaper = 1)
+	time = 100
+	tools = list(/obj/item/weapon/kitchen/knife)
+	category = CAT_WEAPON
+
+/datum/crafting_recipe/bonedagger
+	name = "Bone Dagger"
+	result = /obj/item/weapon/kitchen/knife/combat/bone
+	time = 35
+	reqs = list(/obj/item/stack/sheet/bone = 2)
+	category = CAT_WEAPON
+
+/datum/crafting_recipe/bonespear
+	name = "Bone Spear"
+	result = /obj/item/weapon/twohanded/bonespear
+	time = 50
+	reqs = list(/obj/item/stack/sheet/bone = 5,
+				 /obj/item/crafting/duct_tape = 1)
+	category = CAT_WEAPON
+
+/datum/crafting_recipe/boneaxe
+	name = "Bone Axe"
+	result = /obj/item/weapon/twohanded/fireaxe/boneaxe
+	time = 160
+	reqs = list(/obj/item/stack/sheet/bone = 10,
+				/obj/item/crafting/wonderglue = 2)
+	category = CAT_WEAPON
+
 //Misc
 
 /datum/crafting_recipe/satchel
 	name = "Satchel"
 	result = /obj/item/weapon/storage/backpack/satchel
+	time = 150
+	reqs = list(/obj/item/stack/sheet/animalhide = 3,
+				/obj/item/crafting/duct_tape = 1,
+				/obj/item/crafting/wonderglue = 1)
+	category = CAT_MISC
+
+/datum/crafting_recipe/quiver
+	name = "Quiver"
+	result = /obj/item/weapon/storage/backpack/quiver
 	time = 150
 	reqs = list(/obj/item/stack/sheet/animalhide = 2,
 				/obj/item/crafting/duct_tape = 1,
@@ -41,6 +120,15 @@
 				/obj/item/crafting/bulb = 1,
 				/obj/item/crafting/board = 1,
 				/obj/item/crafting/frame = 1)
+	category = CAT_MISC
+
+/datum/crafting_recipe/sandpaper
+	name = "Sand Paper"
+	result = /obj/item/sandpaper
+	time = 20
+	reqs = list(/obj/item/weapon/paper = 1,
+				/obj/item/weapon/ore/glass = 1,
+				/obj/item/crafting/wonderglue = 1)
 	category = CAT_MISC
 
 //Armor
@@ -158,4 +246,25 @@
 				/obj/item/crafting/abraxo = 1)
 	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/reagent_containers/glass/beaker)
 	time = 100
+	category = CAT_MISC
+
+
+/datum/crafting_recipe/phero1
+	name = "Zombie Pheromones"
+	result = /obj/item/zombie_pheromone
+	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/tainted = 1,
+				/datum/reagent/ammonia = 20,
+				/obj/item/crafting/abraxo = 1)
+	tools = list(/obj/item/weapon/lighter)
+	time = 100
+	category = CAT_MISC
+
+/datum/crafting_recipe/phero2
+	name = "Zombie Pheromones"
+	result = /obj/item/zombie_pheromone
+	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/tainted = 1,
+				/datum/reagent/ammonia = 20,
+				/obj/item/crafting/abraxo = 1)
+	tools = list(/obj/item/weapon/weldingtool)
+	time = 50
 	category = CAT_MISC

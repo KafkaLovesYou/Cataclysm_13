@@ -300,6 +300,43 @@ var/highlander_claymores = 0
 		hitsound = 'sound/weapons/Genhit.ogg'
 		sharpness = IS_BLUNT
 
+/obj/item/weapon/switchblade/boxcutter
+	name = "boxcutter"
+	icon_state = "boxcutter"
+	desc = "Fashioned to always have a sharp blade ready."
+	icon = 'icons/fallout/objects/melee.dmi'
+	flags = CONDUCT
+	force = 3
+	w_class = WEIGHT_CLASS_SMALL
+	throwforce = 5
+	throw_speed = 3
+	throw_range = 6
+	materials = list(MAT_METAL=7000)
+	origin_tech = "engineering=3;combat=0"
+	hitsound = 'sound/weapons/Genhit.ogg'
+	attack_verb = list("stubbed", "poked")
+	resistance_flags = FIRE_PROOF
+
+/obj/item/weapon/switchblade/boxcutter/attack_self(mob/user)
+	extended = !extended
+	playsound(src.loc, 'sound/weapons/batonextend.ogg', 50, 1)
+	if(extended)
+		force = 16
+		w_class = WEIGHT_CLASS_NORMAL
+		throwforce = 20
+		icon_state = "boxcutter_ext"
+		attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
+		hitsound = 'sound/weapons/bladeslice.ogg'
+		sharpness = IS_SHARP
+	else
+		force = 1
+		w_class = WEIGHT_CLASS_SMALL
+		throwforce = 3
+		icon_state = "boxcutter"
+		attack_verb = list("stubbed", "poked")
+		hitsound = 'sound/weapons/Genhit.ogg'
+		sharpness = IS_BLUNT
+
 /obj/item/weapon/switchblade/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is slitting [user.p_their()] own throat with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	return (BRUTELOSS)
@@ -450,10 +487,32 @@ var/highlander_claymores = 0
 	item_state = "baseball_bat"
 	force = 10
 	throwforce = 12
-	attack_verb = list("beat", "smacked")
+	attack_verb = list("beat", "smacked","whacked")
 	w_class = WEIGHT_CLASS_HUGE
 	var/homerun_ready = 0
 	var/homerun_able = 0
+
+/obj/item/weapon/melee/baseball_bat/normalbat
+	//exists solely so that we can't make a spiked bat FROM a spiked bat...
+
+/obj/item/weapon/melee/baseball_bat/spikedbat
+	name = "spiked baseball bat"
+	desc = "A wooden bat with a bunch of nails in it. Crude, but effective."
+	force = 15
+	icon_state = "baseball_bat_spiked"
+	item_state = "baseball_bat_spiked"
+	attack_verb = list("beat", "smacked", "whacked","cut","slashed")
+	sharpness = IS_SHARP
+
+/obj/item/weapon/melee/baseball_bat/barbedbat
+	name = "barbed baseball bat"
+	desc = "A wooden bat wrapped in rusty, barbed wire. Crude, but effective."
+	force = 22
+	throwforce = 15
+	icon_state = "baseball_bat_barbed"
+	item_state = "baseball_bat_barbed"
+	attack_verb = list("beat", "smacked", "whacked", "cut", "slashed")
+	sharpness = IS_SHARP
 
 /obj/item/weapon/melee/baseball_bat/homerun
 	name = "home run bat"

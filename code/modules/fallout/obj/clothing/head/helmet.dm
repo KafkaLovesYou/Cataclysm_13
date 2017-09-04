@@ -95,7 +95,7 @@
 
 /obj/item/clothing/head/helmet/f13/khan
 	name = "Great Khan helmet"
-	desc = "A piece of headwear commonly worn by the Great Khans that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a pre-War motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
+	desc = "A piece of headwear commonly worn by the Great Khans that appears to resemble stereotypical traditional Mongolian helmets - likely adapted from a motorcycle helmet.<br>It is black with two horns on either side and a small spike jutting from the top, much like a pickelhaube.<br>A leather covering protects the wearer's neck and ears from sunburn."
 	icon_state = "khan"
 	item_state = "khan"
 	armor = list(melee = 30, bullet = 10, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0, fire = 0, acid = 0)
@@ -106,7 +106,7 @@
 
 /obj/item/clothing/head/helmet/f13/marine
 	name = "combat helmet"
-	desc = "A pre-War ballistic assembly, designed to provide moderate protection in combat.<br>Overtime the model became significantly less effective, and was replaced with reinforced combat helmet mark I."
+	desc = "A ballistic assembly, designed to provide moderate protection in combat.<br>Overtime this model became significantly less effective, and was replaced with reinforced combat helmet mark I."
 	icon_state = "marine"
 	item_state = "marine"
 	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 20)
@@ -143,7 +143,7 @@
 
 /obj/item/clothing/head/helmet/f13/trooper
 	name = "trooper helmet"
-	desc = "A dully-colored helmet designed to provide troopers a basic head protection.<br>It has a very rough \"mass-produced\" look to it, as it is issued to all NCR soldiers and MPs."
+	desc = "A dully-colored helmet designed to provide troopers a basic head protection."
 	icon_state = "trooper"
 	item_state = "trooper"
 	armor = list(melee = 30, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0, fire = 20, acid = 10)
@@ -526,7 +526,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/t60
 	name = "T-60 power helmet"
-	desc = "An old pre-War power armor helmet.<br>It's very comfy."
+	desc = "An old power armor helmet.<br>It's very comfy."
 	icon_state = "t60helmet"
 	item_state = "t60helmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -544,7 +544,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/t51b
 	name = "T-51b power helmet"
-	desc = "An old pre-War power armor helmet.<br>It's fairly comfy."
+	desc = "An old power armor helmet.<br>It's fairly comfy."
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -562,7 +562,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/t45d
 	name = "T-45d power helmet"
-	desc = "An old pre-War power armor helmet.<br>The inside is stuffy and hot."
+	desc = "An old power armor helmet.<br>The inside is stuffy and hot."
 	icon_state = "t45dhelmet"
 	item_state = "t45dhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
@@ -578,7 +578,7 @@
 
 /obj/item/clothing/head/helmet/power_armor/ncr
 	name = "salvaged power helmet"
-	desc = "A pre-War power armor helmet, recovered and maintained by NCR engineers.<br>The inside is aggravatingly stuffy and hot."
+	desc = "A power armor helmet, recovered and maintained by NCR engineers.<br>The inside is aggravatingly stuffy and hot."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
 	flags = HEADCOVERSEYES | HEADCOVERSMOUTH

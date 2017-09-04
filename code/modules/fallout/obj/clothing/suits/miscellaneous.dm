@@ -116,7 +116,7 @@
 
 /obj/item/clothing/suit/f13/autumn //Based of Colonel Autumn's uniform.
 	name = "tan trenchcoat"
-	desc = "A heavy-duty tan trenchcoat typically worn by pre-War generals."
+	desc = "A heavy-duty tan trenchcoat."
 	icon_state = "autumn"
 	item_state = "autumn"
 	self_weight = 10
@@ -153,7 +153,7 @@
 
 /obj/item/clothing/suit/bio_suit/f13/hazmat
 	name = "hazmat suit"
-	desc = "Yellow Level A , hazmat protective suit.<br>You can see some numbers on the tag: 35 56."
+	desc = "Yellow Level A , hazmat protective suit."
 	icon = 'icons/fallout/clothing/suits.dmi'
 	icon_state = "hazmat"
 	item_state = "hazmat_suit"

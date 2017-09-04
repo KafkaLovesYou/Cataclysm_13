@@ -276,3 +276,96 @@
 		slot_equipment_priority.Insert(index, slot_head)
 		return
 	return ..()
+
+
+/obj/item/weapon/reagent_containers/glass/jerrycan
+	name = "jerrycan"
+	desc = "An big old canister."
+	icon = 'icons/fallout/objects/items.dmi'
+	icon_state = "canister"
+	item_state = "canister"
+	materials = list(MAT_METAL=400)
+	w_class = WEIGHT_CLASS_HUGE
+	amount_per_transfer_from_this = 25
+	possible_transfer_amounts = list(10,25,50,75,100)
+	volume = 200
+	flags = OPENCONTAINER
+	resistance_flags = 0
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 75, acid = 50)
+	slot_equipment_priority = list( \
+		slot_back, slot_wear_id,\
+		slot_w_uniform, slot_wear_suit,\
+		slot_wear_mask, slot_head, slot_neck,\
+		slot_shoes, slot_gloves,\
+		slot_ears, slot_glasses,\
+		slot_belt, slot_s_store,\
+		slot_l_store, slot_r_store,\
+		slot_generic_dextrous_storage
+	)
+
+/obj/item/weapon/reagent_containers/glass/jerrycan/large
+	name = "large jerrycan"
+	desc = "An bigger old canister."
+	icon_state = "canisterlarge"
+	item_state = "canisterlarge"
+	materials = list(MAT_METAL=1000)
+	amount_per_transfer_from_this = 25
+	possible_transfer_amounts = list(10,25,50,75,100)
+	volume = 500
+
+
+/obj/item/weapon/reagent_containers/glass/jug
+	name = "plastic jug"
+	desc = "A jug, made of plastic."
+	icon = 'icons/fallout/objects/items.dmi'
+	icon_state = "jug_r"
+	item_state = "jug_r"
+	materials = list(MAT_METAL=0)
+	w_class = WEIGHT_CLASS_BULKY
+	amount_per_transfer_from_this = 5
+	possible_transfer_amounts = list(5,10,25,50)
+	volume = 150
+	flags = OPENCONTAINER
+	resistance_flags = 0
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 75, acid = 50)
+
+/obj/item/weapon/reagent_containers/glass/jug/New()
+	..()
+	icon_state = "jug_[pick("r","b","g","y")]"
+	item_state = icon_state
+
+/obj/item/weapon/reagent_containers/glass/jug/milk_jug/New()
+	name = "milk jug"
+	list_reagents = list("milk" = rand(volume*0.5,volume))
+	..()
+
+/obj/item/weapon/reagent_containers/glass/jug/ammonia_jug/New()
+	name = "bottle  of ammonia"
+	desc+= "<br>This one is labeled \"ammonia\"."
+	list_reagents = list("ammonia" = rand(volume*0.5,volume))
+	..()
+
+/obj/item/weapon/reagent_containers/glass/jug/chlorine_jug/New()
+	name = "bottle of bleach"
+	desc+= "<br>This one is labeled \"bleach\"."
+	list_reagents = list("chlorine" = rand(volume*0.5,volume))
+	..()
+
+/obj/item/weapon/reagent_containers/glass/jug/acetone_jug/New()
+	name = "bottle of acetone"
+	desc+= "<br>This one is labeled \"acetone\"."
+	list_reagents = list("acetone" = rand(volume*0.5,volume))
+	..()
+
+/obj/item/weapon/reagent_containers/glass/jug/formaldehyde_jug/New()
+	name = "bottle of formaldehyde"
+	desc+= "<br>This one is labeled \"formaldehyde\"."
+	list_reagents = list("formaldehyde" = rand(volume*0.5,volume))
+	..()
+
+/obj/item/weapon/reagent_containers/glass/jug/lye_jug/New()
+	name = "bottle of lye"
+	desc+= "<br>This one is labeled \"lye\"."
+	list_reagents = list("lye" = rand(volume*0.5,volume))
+	..()
+

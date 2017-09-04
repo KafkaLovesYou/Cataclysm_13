@@ -5762,7 +5762,7 @@
 /turf/open/floor/plasteel/black,
 /area/shuttle/labor)
 "ama" = (
-/mob/living/simple_animal/sloth/paperwork,
+/mob/living/simple_animal/hostile/swarmer/ai/ranged_combat,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "amb" = (

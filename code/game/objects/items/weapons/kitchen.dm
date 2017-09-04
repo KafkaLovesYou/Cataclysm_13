@@ -66,6 +66,16 @@
 	sharpness = IS_SHARP_ACCURATE
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0, fire = 50, acid = 50)
 
+/obj/item/weapon/kitchen/knife/pocket
+	name = "pocket knife"
+	icon_state = "pocketknife"
+	desc = "A knife that fits in your pocket. Pretty obvious."
+	throwforce = 7
+	force = 7
+	throw_range = 5
+	materials = list(MAT_METAL=9000)
+	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut","slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut","boy scouted")
+
 /obj/item/weapon/kitchen/knife/attack(mob/living/carbon/M, mob/living/carbon/user)
 	if(user.zone_selected == "eyes")
 		if(user.disabilities & CLUMSY && prob(50))
@@ -89,7 +99,7 @@
 
 /obj/item/weapon/kitchen/knife/butcher
 	name = "butcher's cleaver"
-	icon_state = "butch"
+	icon_state = "cleaver"
 	desc = "A huge thing used for chopping and chopping up meat. This includes wasteland settlers and settler by-products."
 	flags = CONDUCT
 	force = 15
@@ -120,8 +130,9 @@
 	item_state = "bone_dagger"
 	icon_state = "bone_dagger"
 	desc = "A sharpened bone. The bare mimimum in survival."
-	force = 15
-	throwforce = 15
+	force = 12
+	throwforce = 14
+	origin_tech = "materials=2;combat=3;biotech=1"
 	materials = list()
 
 /obj/item/weapon/kitchen/knife/combat/cyborg

@@ -78,7 +78,7 @@
 
 /obj/structure/barricade/bars //FighterX2500 is this you?
 	name = "metal bars"
-	desc = "Old, corroded metal bars. Ain't got a file on you, right?" //Description by Mr.Fagetti
+	desc = "Like in a prison! Ain't got a file on you, right?"
 	icon = 'icons/fallout/objects/structures/fences.dmi'
 	icon_state = "bars"
 	obj_integrity = 400

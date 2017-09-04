@@ -22,9 +22,9 @@
 
 /obj/structure/fence
 	name = "metal fence"
-	desc = "You see nothing out of the ordinary." //It's an original description from Fallout.
+	desc = "A fence. Keeps things out, or in." //It's an original description from Fallout.
 	icon = 'icons/fallout/objects/structures/fences.dmi'
-	icon_state = "metal_fence0"
+	icon_state = "metal_fence3"
 	icontype = "metal_fence"
 	anchored = 1
 	density = 1

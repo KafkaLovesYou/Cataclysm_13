@@ -181,3 +181,5 @@
 
 /obj/machinery/sleeper/old
 	icon_state = "oldpod"
+	name = "cryogenic suspension pod"
+

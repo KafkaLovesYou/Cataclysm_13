@@ -43,7 +43,7 @@
 	open_space = 1
 	blob_allowed = 0
 	environment = 15
-	grow_chance = 75
+	grow_chance = 98 // LOT of vegetation
 
 /area/f13/ruins
 	name = "Ruins"
@@ -156,6 +156,19 @@
 	environment = 16
 	grow_chance = 5
 
+/area/f13/city/level2
+	name = "City Level 2"
+	icon_state = "city"
+	ambience = list('sound/f13ambience/wasteland.ogg')
+	ambientmusic = list('sound/f13music/fo2_city.ogg','sound/f13music/fo2_hub.ogg','sound/misc/null.ogg')
+	ambientsounds = list('sound/f13ambience/dog_distant_1.ogg','sound/f13ambience/dog_distant_2.ogg','sound/f13ambience/dog_distant_3.ogg', \
+	'sound/f13ambience/ambigen_1.ogg','sound/f13ambience/ambigen_2.ogg')
+	outdoors = 1
+	open_space = 1
+	blob_allowed = 0
+	environment = 16
+	grow_chance = 5
+
 /area/f13/citycaves
 	name = "City Caves"
 	icon_state = "citycaves"
@@ -220,9 +233,9 @@
 	ambientsounds = list('sound/f13ambience/ambigen_3.ogg','sound/f13ambience/ambigen_4.ogg','sound/f13ambience/ambigen_5.ogg', \
 	'sound/f13ambience/ambigen_6.ogg','sound/f13ambience/ambigen_7.ogg','sound/f13ambience/ambigen_8.ogg')
 	environment = 4
-	grow_chance = 5
+	grow_chance = 0
 
-/area/f13/bunker
+/area/f13/bunker //evac shelter
 	name = "Bunker"
 	icon_state = "bunker"
 	ambience = list('sound/f13ambience/building.ogg')
@@ -268,7 +281,19 @@
 	environment = 21
 	grow_chance = 25
 
-/area/f13/secret
+/area/f13/subway/sciencelab
+	name = "science lab"
+	icon_state = "secret"
+
+/area/f13/subway/militarybase
+	name = "military base"
+	icon_state = "secret"
+
+/area/f13/subway/shelter
+	name = "shelter basement"
+	icon_state = "building"
+
+/area/f13/secret //random area
 	name = "Secret"
 	icon_state = "secret"
 	ambience = list('sound/f13ambience/building.ogg')
@@ -276,16 +301,18 @@
 	ambientsounds = list('sound/ambience/signal.ogg','sound/f13ambience/ambigen_10.ogg','sound/f13ambience/ambigen_11.ogg', \
 	'sound/f13ambience/ambigen_12.ogg','sound/f13ambience/ambigen_13.ogg')
 	environment = 11
+	outdoors = 1
 	grow_chance = 0
 
-/area/f13/radiation
+/area/f13/radiation //swamp
 	name = "Radiation"
 	icon_state = "radiation"
 	ambience = list('sound/f13ambience/wasteland.ogg')
 	ambientmusic = list('sound/f13music/fo2_wasteland.ogg','sound/f13music/fo2_desert.ogg','sound/f13music/fo2_world.ogg','sound/misc/null.ogg')
-	ambientsounds = list('sound/f13ambience/rattlesnake_1.ogg','sound/f13ambience/rattlesnake_2.ogg','sound/f13ambience/rattlesnake_3.ogg')
+	ambientsounds = list('sound/f13ambience/ambigen_1.ogg','sound/f13ambience/rattlesnake_1.ogg','sound/f13ambience/rattlesnake_2.ogg','sound/f13ambience/rattlesnake_3.ogg')
 	environment = 19
-	grow_chance = 5
+	outdoors = 1
+	grow_chance = 70
 
 //Faction related areas
 

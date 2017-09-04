@@ -1,0 +1,65 @@
+insectoids
+	ant larva *Use Brainslug
+	* giant ant *S
+	* soldier ant *S
+	? ant queen *S
+		- Ants make smashable, opaque, dense "anthills" (ala termit mounds)
+		- underground lairs?
+	* giant fly
+	giant maggot
+	* giant bee
+	* giant wasp
+	? dermatik
+	dermatik larva *Use Brainslug?
+	* giant mosquito
+	giant dragonfly
+	giant centipede
+	giant frog
+	giant slug/sludge crawler(?)
+	* giant spiders *S *C
+	- Wolf spider, web spider, jumping spider, trap door spider, black widow
+	*C still require behaviour tweaks
+	giant ant lion?
+
+Plantoids
+	triffids
+	triffid heart
+	fungaloid
+	fungaloid spore
+	fungal wall (construction?)
+	fungal bloomer (fauna?)
+	fungal zombie!!
+
+Mutants
+	* Zombies
+	-Standard, anklebiter, howler, boomer, spitter, necromancer, shocker, armored, grappler/toppler, irradiated wanderer, charred nightmare
+	- consider roles, clothes, decay rate, "adjectives?"
+	Rat king
+	mutant crawler
+	mutant animals (?)
+
+Horrors
+	Jabberwock
+	Amigara horror?
+	Blank body?'
+		Sprited?
+	Twisted body?
+		Fleshmonk?
+	
+
+Animals
+	* Goat
+	* Sheep
+	* Cow
+	Horse?
+	? Cat
+	Dog
+	* Wolf
+	Coyote
+	Beaver
+	? Fox
+	Deer/Stag
+	Moose?
+	* chickens
+	Ducks
+	Crows

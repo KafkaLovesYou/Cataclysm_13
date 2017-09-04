@@ -25,7 +25,7 @@
 
 /mob/new_player/proc/new_player_panel()
 
-	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
+	var/output = "<center><p><a href='byond://?src=\ref[src];show_preferences=1'>Customize Character</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
@@ -34,12 +34,12 @@
 			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <b>Not Ready</b> \]</p>"
 
 	else
-		output += "<p><a href='byond://?src=\ref[src];manifest=1'>View Manifest</A></p>"
-		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
+	//	output += "<p><a href='byond://?src=\ref[src];manifest=1'>View Manifest</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Enter the Wasteland</A></p>"
 
-	output += "<p><a href='byond://?src=\ref[src];show_content=1'>Content Packs</a></p>"
+	//output += "<p><a href='byond://?src=\ref[src];show_content=1'>Content Packs</a></p>"
 
-	output += "<p><a href='byond://?src=\ref[src];contribute=1'>Contribute</a></p>"
+//	output += "<p><a href='byond://?src=\ref[src];contribute=1'>Contribute</a></p>"
 
 	if(client && client.holder)
 		output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"

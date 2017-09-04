@@ -29,6 +29,28 @@
 	blood_volume = BLOOD_VOLUME_NORMAL
 	var/obj/item/udder/udder = null
 
+//Sheep!
+/mob/living/simple_animal/hostile/retaliate/goat/sheep
+	name = "sheep"
+	desc = "Like a goat, but not as horny."
+	icon_state = "sheep"
+	icon_living = "sheep"
+	icon_dead = "sheep_dead"
+	var/sheared = FALSE
+/mob/living/simple_animal/hostile/retaliate/goat/sheep/attackby(obj/item/O, mob/user, params)
+	if(istype(O, /obj/item/weapon/razor))
+	//TODO
+		if(!sheared)
+			//play razor sound
+			//spawn wool or some shit
+			sheared = FALSE
+			desc += "<br>This one has been sheared."
+			to_chat(user, "<span class='notice'>You shear \the [name].</span>")
+		else
+			to_chat(user, "<span class='warning'>This [name] has already been sheared.</span>")
+	else
+		return ..()
+
 /mob/living/simple_animal/hostile/retaliate/goat/New()
 	udder = new()
 	..()
@@ -191,8 +213,8 @@
 	if(!.)
 		return
 	if(!stat && !ckey)
-		amount_grown += rand(1,2)
-		if(amount_grown >= 100)
+		amount_grown += rand(0,1)
+		if(amount_grown >= 500)
 			new /mob/living/simple_animal/chicken(src.loc)
 			qdel(src)
 

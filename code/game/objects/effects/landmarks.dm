@@ -284,3 +284,214 @@
 	ruin_landmarks -= src
 	ruin_template = null
 	. = ..()
+
+
+/obj/effect/landmark/mobspawn/New() //mob spawner, selects a random subclass and disappears
+
+	var/list/options = typesof(/obj/effect/landmark/mobspawn)
+	var/PICK= options[rand(1,options.len)]
+	new PICK(src.loc)
+	qdel(src)
+
+/obj/effect/landmark/mobspawn/cows/New()
+	new /mob/living/simple_animal/cow(src.loc)
+	if(prob(50))
+		new /mob/living/simple_animal/cow(src.loc)
+	if(prob(50))
+		new /mob/living/simple_animal/cow(src.loc)
+	if(prob(50))
+		new /mob/living/simple_animal/cow(src.loc)
+		if(prob(50))
+			new /mob/living/simple_animal/cow(src.loc)
+	qdel(src)
+
+/obj/effect/landmark/mobspawn/chickens/New()
+	new /mob/living/simple_animal/chicken(src.loc)
+	if(prob(75))
+		new /mob/living/simple_animal/chicken(src.loc)
+		new /mob/living/simple_animal/chick(src.loc)
+		if(prob(75))
+			new /mob/living/simple_animal/chick(src.loc)
+			if(prob(66))
+				new /mob/living/simple_animal/chick(src.loc)
+				if(prob(50))
+					new /mob/living/simple_animal/chick(src.loc)
+	if(prob(75))
+		new /mob/living/simple_animal/chicken(src.loc)
+		if(prob(50))
+			new /mob/living/simple_animal/chicken(src.loc)
+	qdel(src)
+
+/obj/effect/landmark/mobspawn/mice/New()
+	new /mob/living/simple_animal/mouse(src.loc)
+	if(prob(75))
+		new /mob/living/simple_animal/mouse(src.loc)
+	if(prob(50))
+		new /mob/living/simple_animal/mouse(src.loc)
+	if(prob(35))
+		new /mob/living/simple_animal/mouse(src.loc)
+	qdel(src)
+
+/obj/effect/landmark/mobspawn/cockroach/New()
+	new /mob/living/simple_animal/cockroach(src.loc)
+	new /mob/living/simple_animal/cockroach(src.loc)
+	if(prob(75))
+		new /mob/living/simple_animal/cockroach(src.loc)
+	if(prob(25))
+		new /mob/living/simple_animal/cockroach(src.loc)
+		new /mob/living/simple_animal/cockroach(src.loc)
+	qdel(src)
+
+/obj/effect/landmark/mobspawn/wolves/New()
+	new /mob/living/simple_animal/hostile/wolf(src.loc)
+	new /mob/living/simple_animal/hostile/wolf(src.loc)
+	if(prob(80))
+		new /mob/living/simple_animal/hostile/wolf/alpha(src.loc)
+	if(prob(25))
+		new /mob/living/simple_animal/hostile/wolf(src.loc)
+		new /mob/living/simple_animal/hostile/wolf(src.loc)
+		if(prob(75))
+			new /mob/living/simple_animal/hostile/wolf(src.loc)
+	qdel(src)
+
+
+
+/obj/effect/landmark/mobspawn/hostile/New() //HOSTILE mob spawner, selects a random subclass and disappears
+
+	var/list/options = typesof(/obj/effect/landmark/mobspawn/hostile)
+	var/PICK= options[rand(1,options.len)]
+	if(prob(90))
+		new PICK(src.loc)
+	qdel(src)
+
+/obj/effect/landmark/mobspawn/hostile/randomChance/New()
+	if(prob(50))
+		new /obj/effect/landmark/mobspawn/hostile/random(src.loc)
+	if(prob(2))
+		new /obj/effect/landmark/mobspawn/hostile/randomChance(src.loc)
+	qdel(src)
+
+/obj/effect/landmark/mobspawn/hostile/random/New()
+	if(prob(10))
+		new /obj/effect/landmark/mobspawn/hostile/zombies(src.loc)
+		if(prob(50))
+			new /obj/effect/landmark/mobspawn/hostile/zombies(src.loc)
+	else if(prob(20))
+		new /obj/effect/landmark/mobspawn/hostile/ants(src.loc)
+		if(prob(50))
+			new /obj/effect/landmark/mobspawn/hostile/ants(src.loc)
+	else if(prob(40))
+		new /obj/effect/landmark/mobspawn/hostile/swampoids(src.loc)
+		if(prob(50))
+			new /obj/effect/landmark/mobspawn/hostile/swampoids(src.loc)
+	else if(prob(80))
+		new /obj/effect/landmark/mobspawn/hostile/spiders(src.loc)
+		if(prob(50))
+			new /obj/effect/landmark/mobspawn/hostile/spiders(src.loc)
+	else
+		//triffids
+		return
+	qdel(src)
+
+/obj/effect/landmark/mobspawn/hostile/zombies/New()
+	if(prob(80))
+		new /mob/living/simple_animal/hostile/ghoul(src.loc)
+		if(prob(20))
+			new /mob/living/simple_animal/hostile/ghoul/aggressive(src.loc)
+			if(prob(20))
+				new /mob/living/simple_animal/hostile/ghoul/aggressive(src.loc)
+		else if(prob(10))
+			new /mob/living/simple_animal/hostile/ghoul/glowing(src.loc)
+		else if(prob(50))
+			new /mob/living/simple_animal/hostile/ghoul(src.loc)
+			if(prob(50))
+				new /mob/living/simple_animal/hostile/ghoul(src.loc)
+	qdel(src)
+
+/obj/effect/landmark/mobspawn/hostile/zombies/single/New()
+	if(prob(95))
+		new /mob/living/simple_animal/hostile/ghoul(src.loc)
+	qdel(src)
+
+
+/obj/effect/landmark/mobspawn/hostile/ants/New()
+	new /mob/living/simple_animal/hostile/retaliate/insectoid/ant(src.loc)
+	if(prob(99))
+		new /mob/living/simple_animal/hostile/retaliate/insectoid/ant(src.loc)
+		if(prob(30))
+			new /mob/living/simple_animal/hostile/retaliate/insectoid/ant/soldier(src.loc)
+			if(prob(20))
+				new /mob/living/simple_animal/hostile/retaliate/insectoid/ant/soldier(src.loc)
+		else
+			new /mob/living/simple_animal/hostile/retaliate/insectoid/ant(src.loc)
+			if(prob(50))
+				new /mob/living/simple_animal/hostile/retaliate/insectoid/ant(src.loc)
+	qdel(src)
+
+/obj/effect/landmark/mobspawn/hostile/ants/with_queen/New()
+	new /mob/living/simple_animal/hostile/retaliate/insectoid/ant/queen(src.loc)
+	..() //do the rest
+
+/obj/effect/landmark/mobspawn/hostile/swampoids/New() //picks ONE type of insectoid and spawns up to seven of them
+	var/list/options = list(/mob/living/simple_animal/hostile/retaliate/insectoid/bee, \
+							/mob/living/simple_animal/hostile/retaliate/insectoid/fly, \
+							/mob/living/simple_animal/hostile/retaliate/insectoid/wasp, \
+						/*	/mob/living/simple_animal/hostile/retaliate/insectoid/dragonfly, \
+							/mob/living/simple_animal/hostile/retaliate/insectoid/centipede, \
+							/mob/living/simple_animal/hostile/retaliate/insectoid/slug, \
+						*/	/mob/living/simple_animal/hostile/retaliate/insectoid/mosquito)
+	var/PICK= options[rand(1,options.len)]
+	if(prob(98))
+		new PICK(src.loc)
+		if(prob(75))
+			new PICK(src.loc)
+		if(prob(50))
+			new PICK(src.loc)
+			if(prob(25))
+				new PICK(src.loc)
+				new PICK(src.loc)
+				if(prob(50))
+					new PICK(src.loc)
+					new PICK(src.loc)
+	else
+		new /mob/living/simple_animal/hostile/retaliate/insectoid/wasp/dermatik(src.loc)
+		if(prob(50))
+			new /mob/living/simple_animal/hostile/retaliate/insectoid/wasp/dermatik(src.loc)
+			if(prob(50))
+				new /mob/living/simple_animal/hostile/retaliate/insectoid/wasp/dermatik(src.loc)
+	qdel(src)
+
+
+/obj/effect/landmark/mobspawn/hostile/spiders/New()
+	var/list/options = list(/mob/living/simple_animal/hostile/poison/giant_spider/trapdoor, \
+							/mob/living/simple_animal/hostile/poison/giant_spider/wolf, \
+							/mob/living/simple_animal/hostile/poison/giant_spider/web, \
+							/mob/living/simple_animal/hostile/poison/giant_spider/jumping)
+	var/PICK= options[rand(1,options.len)]
+	new PICK(src.loc)
+	if(prob(30))
+		new PICK(src.loc)
+
+	if(prob(85))
+		new /mob/living/simple_animal/hostile/poison/giant_spider/trapdoor(src.loc)
+		if(prob(30))
+			new /mob/living/simple_animal/hostile/poison/giant_spider/wolf(src.loc)
+		if(prob(30))
+			new /mob/living/simple_animal/hostile/poison/giant_spider/web(src.loc)
+		if(prob(50))
+			new /mob/living/simple_animal/hostile/poison/giant_spider/jumping(src.loc)
+		else if(prob(50))
+			new PICK(src.loc)
+		else
+			new /mob/living/simple_animal/hostile/poison/giant_spider/wolf(src.loc)
+			if(prob(50))
+				new /mob/living/simple_animal/hostile/poison/giant_spider/jumping(src.loc)
+
+	if(prob(15))
+		new /mob/living/simple_animal/hostile/poison/giant_spider/blackwidow(src.loc)
+		new PICK(src.loc)
+	qdel(src)
+
+
+/obj/effect/landmark/mobspawn/hostile/giant_rats/New()
+	qdel(src)

@@ -1,4 +1,4 @@
-"a" = (/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"a" = (/turf/open/indestructible/ground/diggable/desert,/area/f13/wasteland)
 "b" = (/turf/closed/wall/f13/supermart,/area/f13/wasteland)
 "c" = (/turf/open/floor/f13,/area/f13/wasteland)
 "d" = (/obj/structure/fence,/turf/open/floor/f13,/area/f13/wasteland)
@@ -45,7 +45,7 @@
 "S" = (/obj/structure/toilet{tag = "icon-toilet00 (NORTH)"; icon_state = "toilet00"; dir = 1; step_y = -2},/turf/open/floor/f13,/area/f13/wasteland)
 "T" = (/obj/structure/bed,/turf/open/floor/f13,/area/f13/wasteland)
 "U" = (/obj/structure/chair/bench,/turf/open/floor/f13,/area/f13/wasteland)
-"V" = (/obj/structure/campfire,/turf/open/indestructible/ground/desert,/area/f13/wasteland)
+"V" = (/obj/structure/campfire,/turf/open/indestructible/ground/diggable/desert,/area/f13/wasteland)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

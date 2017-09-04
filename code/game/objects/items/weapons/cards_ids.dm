@@ -71,6 +71,18 @@
 		return
 	A.emag_act(user)
 
+
+	//military ID access cards
+/obj/item/weapon/card/emag/military
+	name = "\proper military access card"
+	icon_state = "centcom"
+
+	//science ID access cards
+/obj/item/weapon/card/emag/science
+	name = "\proper science ID card"
+	icon_state = "silver"
+
+
 /obj/item/weapon/card/id
 	name = "identification card"
 	desc = "A card used to provide ID and determine access across the station."

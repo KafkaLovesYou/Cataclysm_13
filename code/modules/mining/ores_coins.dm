@@ -3,9 +3,14 @@
 /obj/item/weapon/ore
 	name = "rock"
 	icon = 'icons/obj/mining.dmi'
-	icon_state = "ore"
+	icon_state = "slag"
 	var/points = 0 //How many points this ore gets you from the ore redemption machine
 	var/refined_type = null //What this ore defaults to being refined into
+
+/obj/item/weapon/ore/New()
+	pixel_x = rand(-8, 8)
+	pixel_y = rand(-8, 8)
+	..()
 
 /obj/item/weapon/ore/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/weapon/weldingtool))
@@ -64,7 +69,7 @@
 	refined_type = /obj/item/stack/sheet/metal
 
 /obj/item/weapon/ore/glass
-	name = "sand pile"
+	name = "dirt pile"
 	icon_state = "Glass ore"
 	origin_tech = "materials=1"
 	points = 1
@@ -73,7 +78,7 @@
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/weapon/ore/glass/attack_self(mob/living/user)
-	to_chat(user, "<span class='notice'>You use the sand to make sandstone.</span>")
+	to_chat(user, "<span class='notice'>You use the dirt to make sandstone.</span>")
 	var/sandAmt = 1
 	for(var/obj/item/weapon/ore/glass/G in user.loc) // The sand on the floor
 		sandAmt += 1
@@ -96,13 +101,13 @@
 		return
 	var/mob/living/carbon/human/C = hit_atom
 	if(C.head && C.head.flags_cover & HEADCOVERSEYES)
-		visible_message("<span class='danger'>[C]'s headgear blocks the sand!</span>")
+		visible_message("<span class='danger'>[C]'s headgear blocks \the [src]!</span>")
 		return
 	if(C.wear_mask && C.wear_mask.flags_cover & MASKCOVERSEYES)
-		visible_message("<span class='danger'>[C]'s mask blocks the sand!</span>")
+		visible_message("<span class='danger'>[C]'s mask blocks \the [src]!</span>")
 		return
 	if(C.glasses && C.glasses.flags_cover & GLASSESCOVERSEYES)
-		visible_message("<span class='danger'>[C]'s glasses block the sand!</span>")
+		visible_message("<span class='danger'>[C]'s glasses block \the [src]!</span>")
 		return
 	C.adjust_blurriness(6)
 	C.adjustStaminaLoss(15)//the pain from your eyes burning does stamina damage

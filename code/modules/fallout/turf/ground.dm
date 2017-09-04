@@ -30,6 +30,15 @@
 		else
 			to_chat(user, "<span class='warning'>You need one floor tile to build a floor!</span>")
 
+	else if(istype(C,/obj/item/stack/tile/wood))
+		var/obj/item/stack/tile/wood/S = C
+		if(S.use(1))
+			playsound(src, 'sound/weapons/Genhit.ogg', 50, 1)
+			to_chat(user, "<span class='notice'>You build a foundation.</span>")
+			ChangeTurf(/turf/open/floor/f13/wood)
+		else
+			to_chat(user, "<span class='warning'>You need one floor tile to build a floor!</span>")
+
 ///turf/ground/Entered(atom/movable/A)
 //	..()
 
@@ -44,26 +53,51 @@
 
 var/global/list/desertTurfEdgeCache
 
-/turf/open/indestructible/ground/desert
-	name = "desert"
+/turf/open/indestructible/ground/diggable/desert
+	name = "\proper dry dirt"
 	icon_state = "wasteland"
-	step_sounds = list("human" = "dirtfootsteps")
+	step_sounds = list("human" = "sandfootsteps")
 	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
-	/obj/item/seeds/ferocactus, /obj/item/seeds/corn,/obj/item/seeds/shroom)
+	/obj/item/seeds/ferocactus, /obj/item/seeds/corn,/obj/item/seeds/shroom, /obj/item/seeds/wheat/oat)
 	slowdown = 0.1
 	flags = CAN_HAVE_NATURE | ADJACENCIES_OVERLAY
 
-/turf/open/indestructible/ground/desert/New()
+/turf/open/indestructible/ground/diggable/desert/New()
 	icon_state = "wasteland[rand(1,31)]"
 	..()
-/turf/open/indestructible/ground/dirt
-	name = "dirt"
+
+/turf/open/indestructible/ground/diggable/dirt
+	name = "\proper dirt"
 	icon_state = "dirtfull"
 	step_sounds = list("human" = "dirtfootsteps")
 	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
-	/obj/item/seeds/potato, /obj/item/seeds/carrot, /obj/item/seeds/pumpkin, /obj/item/seeds/corn)
+	/obj/item/seeds/potato, /obj/item/seeds/carrot, /obj/item/seeds/pumpkin, /obj/item/seeds/corn, /obj/item/seeds/cabbage, \
+	/obj/item/seeds/cannabis)
 	slowdown = 0.2
+	flags = CAN_HAVE_NATURE | ADJACENCIES_OVERLAY
+
+/turf/open/indestructible/ground/diggable/mud
+	name = "\proper mud"
+	icon_state = "dirtfull"
+	step_sounds = list("human" = "waterfootsteps")
+	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
+	/obj/item/seeds/reishi, , /obj/item/seeds/plump, , /obj/item/seeds/nettle, , /obj/item/seeds/shroom, , /obj/item/seeds/amanita,
+	/obj/item/seeds/chanter , /obj/item/seeds/glowshroom, , /obj/item/seeds/liberty, /obj/item/seeds/grass, /obj/item/seeds/wheat/rice)
+	slowdown = 0.4
+	flags = CAN_HAVE_NATURE | ADJACENCIES_OVERLAY
+
+/turf/open/indestructible/ground/diggable/grass
+	name = "\proper grass"
+	icon_state = "grass1"
+	step_sounds = list("human" = "grassfootsteps")
+	allowed_plants = list(/obj/item/seeds/broc, /obj/item/seeds/xander, /obj/item/seeds/mutfruit, \
+	/obj/item/seeds/potato, /obj/item/seeds/carrot, /obj/item/seeds/pumpkin, /obj/item/seeds/corn, /obj/item/seeds/apple, \
+	/obj/item/seeds/cabbage, /obj/item/seeds/grass, /obj/item/seeds/cabbage)
+	slowdown = 0.1
 	flags = CAN_HAVE_NATURE
+/turf/open/indestructible/ground/diggable/grass/New()
+	icon_state = "grass[pick(1,2,3,4)]"
+	..()
 
 /turf/open/indestructible/ground/road
 	name = "\proper road"
@@ -75,6 +109,7 @@ var/global/list/desertTurfEdgeCache
 	name = "\proper sidewalk"
 	icon_state = "outermiddle"
 	icon = 'icons/fallout/turfs/sidewalk.dmi'
+	allowed_plants = list(/obj/item/seeds/harebell)
 	step_sounds = list("human" = "erikafootsteps")
 
 /turf/open/indestructible/ground/mountain

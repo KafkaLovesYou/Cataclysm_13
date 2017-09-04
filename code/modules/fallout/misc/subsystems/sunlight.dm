@@ -99,6 +99,7 @@ var/list/datum/time_of_day/time_cycle_steps = list(new /datum/time_of_day/mornin
 	if(world.time > step_finish)
 		set_time_of_day(current_step + 1)
 
+
 /datum/subsystem/sunlight/proc/update_color()
 	var/blend_amount = (world.time - step_started) / current_step_datum.duration
 	current_color = BlendRGB(current_step_datum.color, next_step_datum.color, blend_amount)

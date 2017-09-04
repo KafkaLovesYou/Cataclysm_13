@@ -1,12 +1,12 @@
 /world
 	mob = /mob/new_player
-	turf = /turf/open/indestructible/ground/desert
+	turf = /turf/open/indestructible/ground/diggable/desert
 	area = /area/f13/wasteland
 	view = "15x15"
 	cache_lifespan = 7
 	hub = "Exadv1.spacestation13"
 	hub_password = "kMZy3U5jJHSiBQjr"
-	name = "Fallout 13"
+	name = "Cataclysm 13"
 	fps = 40
 	visibility = 1
 
@@ -202,7 +202,7 @@ var/last_irc_status = 0
 	if(ticker.delay_end)
 		to_chat(world, "<span class='boldannounce'>An admin has delayed the round end.</span>")
 		return
-	to_chat(world, "<span class='boldannounce'>Rebooting World in [delay/10] [delay > 10 ? "seconds" : "second"]. [reason]</span>")
+	to_chat(world, "<span class='boldannounce'>Rebooting World in [delay/10] [delay > 10 ? "seconds" : "second"]. [reason]. This may take a few minutes!</span>")
 	var/round_end_sound_sent = FALSE
 	if(ticker.round_end_sound)
 		round_end_sound_sent = TRUE
@@ -322,12 +322,12 @@ var/inerror = 0
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"https://discord.gg/K2Yxxvs\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"https://discord.gg/hfmcZzQ\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
 	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
-	s += "<img src='http://i.imgur.com/UrVghOE.gif'><br>"
+	s += "<br><img src='http://cddawiki.chezzo.com/cdda_wiki/resources/assets/cataclysmwiki.png'><br>"
 
 	var/list/features = list()
 
@@ -355,8 +355,8 @@ var/inerror = 0
 	else if (n > 0)
 		features += "~[n] player"
 
-	if (!host && config && config.hostedby)
-		features += "follow us at <b>reddit.com/r/Fallout13</b>"
+//	if (!host && config && config.hostedby)
+//		features += "follow us at <b>reddit.com/r/Fallout13</b>"
 
 	if (features)
 		s += ": [jointext(features, ", ")]"

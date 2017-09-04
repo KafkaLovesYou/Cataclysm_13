@@ -58,14 +58,14 @@
 
 /mob/living/simple_animal/hostile/eyebot/floatingeye
 	name = "floating eyebot"
-	desc = "A quick-observation robot commonly found in pre-War military installations.<br>The floating eyebot uses a powerful taser to keep intruders in line."
+	desc = "A quick-observation robot commonly found in military installations.<br>The floating eyebot uses a powerful taser to keep intruders in line."
 	icon_state = "floatingeye"
 	icon_living = "floatingeye"
 	icon_dead = "floatingeye_d"
 	icon_gib = "floatingeye_d"
 
 	retreat_distance = 4
-	faction = list("hostile", "bs")
+	faction = list("hostile", "bs","ghoul","police","military","science")
 
 	projectiletype = /obj/item/projectile/energy/electrode
 	projectilesound = 'sound/weapons/resonator_blast.ogg'

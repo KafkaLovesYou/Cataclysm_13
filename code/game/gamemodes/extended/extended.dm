@@ -10,6 +10,7 @@
 	return 1
 
 /datum/game_mode/extended/post_setup()
+	new /obj/maprandomizer_spawner(0,0,1) //idk where else to put iiiiit!!
 	..()
 
 /datum/game_mode/extended/announced

@@ -73,8 +73,7 @@
 	..()
 	drop_x = x
 	drop_y = y
-	if(z+1 <= world.maxz)
-		drop_z = z+1
+	drop_z = 1
 
 
 /turf/open/chasm/straight_down/lava_land_surface

@@ -56,7 +56,7 @@
 
 /obj/item/weapon/gun/ballistic/shotgun/rifle
 	name = "Rifle .308"
-	desc = "A pre-War bolt-action hunting rifle."
+	desc = "A bolt-action hunting rifle."
 	icon_state = "rifle"
 	item_state = "shotgun"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'
@@ -81,7 +81,7 @@
 
 /obj/item/weapon/gun/ballistic/automatic/assault_rifle
 	name = "Assault Rifle 5.56mm"
-	desc = "Also known as a Service Rifle by NCR troops, the Assault Rifle is a semi-automatic medium power rifle which takes the common 5.56mm cartridge and has a magazine capacity of 20 rounds."
+	desc = "Also known as a Service Rifle by the military, the Assault Rifle is a semi-automatic medium power rifle which takes the common 5.56mm cartridge and has a magazine capacity of 20 rounds."
 	icon_state = "assault-rifle"
 	item_state = "assault"
 	icon = 'icons/fallout/objects/guns/ballistic.dmi'

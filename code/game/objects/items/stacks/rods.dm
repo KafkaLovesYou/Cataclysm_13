@@ -1,6 +1,9 @@
 var/global/list/datum/stack_recipe/rod_recipes = list ( \
 	new/datum/stack_recipe("grille", /obj/structure/grille, 2, time = 10, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("bars", /obj/structure/barricade/bars, 10, time = 50, one_per_turf = 1, on_floor = 1), \
+	null,\
 	new/datum/stack_recipe("table frame", /obj/structure/table_frame, 2, time = 10, one_per_turf = 1, on_floor = 1), \
+	new/datum/stack_recipe("cot", /obj/structure/bed/cot, 6, time = 20, one_per_turf = 1, on_floor = 0), \
 	new/datum/stack_recipe("scooter frame", /obj/item/scooter_frame, 10, time = 25, one_per_turf = 0), \
 	)
 
@@ -20,6 +23,26 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 	max_amount = 50
 	attack_verb = list("hit", "bludgeoned", "whacked")
 	hitsound = 'sound/weapons/grenadelaunch.ogg'
+
+
+/obj/item/stack/nails
+	name = "nails"
+	desc = "Nails, for nailing."
+	singular_name = "nail"
+	icon_state = "nails"
+	item_state = "rods"
+	flags = CONDUCT
+	w_class = WEIGHT_CLASS_SMALL
+	force = 0
+	throwforce = 4
+	throw_speed = 5
+	throw_range = 5
+	materials = list(MAT_METAL=10)
+	max_amount = 100
+	attack_verb = list("nailed")
+
+/obj/item/stack/nails/random/New()
+	amount = rand(1,max_amount)
 
 /obj/item/stack/rods/New(var/loc, var/amount=null)
 	..()
@@ -73,3 +96,7 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 
 /obj/item/stack/rods/cyborg/update_icon()
 	return
+
+
+
+

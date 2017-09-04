@@ -1,5 +1,3 @@
-//Fallout 13 - I am a soldier and I'm marching on, I am a warrior and this is my song
-
 /datum/f13_objective/join
 	name = "Dream of a Lifetime"
 	desc = "Since childhood you've dreamed of joining the %faction_name% to unite in the fight for a better future. Now you have finally decided to go through with it.<br>Find and join the %faction_name% !"

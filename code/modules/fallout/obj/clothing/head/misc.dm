@@ -5,7 +5,7 @@
 	self_weight = 1
 
 /obj/item/clothing/head/f13/police
-	name = "pre-War police cap"
+	name = "police cap"
 	desc = "A police peaked cap of dark blue in color with a silver-colored badge on the frontside.<br>The badge is inscribed with the words SPECIAL and POLICE."
 	icon_state = "retropolice"
 	item_state = "fedora"

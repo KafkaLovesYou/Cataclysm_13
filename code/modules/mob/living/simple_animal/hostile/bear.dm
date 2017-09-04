@@ -50,6 +50,13 @@
 	icon_dead = "snowbear_dead"
 	desc = "It's a polar bear, in space, but not actually in space."
 
+/mob/living/simple_animal/hostile/bear/grizzly
+	name = "grizzly bear"
+	icon_state = "brownbear"
+	icon_living = "brownbear"
+	icon_dead = "brownbear_dead"
+	desc = "Bear. Grizzly. Just start running."
+
 /mob/living/simple_animal/hostile/bear/russian
 	name = "combat bear"
 	desc = "A ferocious brown bear decked out in armor plating, a red star with yellow outlining details the shoulder plating."

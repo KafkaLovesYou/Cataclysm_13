@@ -7,7 +7,7 @@
 	icon = 'icons/fallout/objects/bottlecaps.dmi'
 	icon_state = "1"
 	amount = 1
-	max_amount = 3000
+	max_amount = 35000
 	throwforce = 0
 	throw_speed = 2
 	throw_range = 2

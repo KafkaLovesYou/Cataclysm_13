@@ -1,0 +1,111 @@
+"aa" = (/turf/open/indestructible/ground/diggable/desert,/area/construction/Storage)
+"ab" = (/turf/open/floor/plating,/area/construction/Storage)
+"ac" = (/obj/effect/landmark/mobspawn/hostile/ants,/turf/open/floor/plating,/area/construction/Storage)
+"ad" = (/obj/effect/landmark/mobspawn/hostile/swampoids,/turf/open/floor/plating,/area/construction/Storage)
+"ae" = (/obj/effect/landmark/mobspawn/hostile/spiders,/turf/open/floor/plating,/area/construction/Storage)
+"af" = (/obj/effect/landmark/mobspawn/hostile/zombies,/turf/open/floor/plating,/area/construction/Storage)
+"ag" = (/obj/effect/landmark/mobspawn/wolves,/obj/effect/landmark/mobspawn/wolves,/obj/effect/landmark/mobspawn/wolves,/obj/effect/landmark/mobspawn/wolves,/obj/effect/landmark/mobspawn/wolves,/turf/open/floor/plating,/area/construction/Storage)
+"ah" = (/obj/effect/landmark/mobspawn/hostile/ants/with_queen,/turf/open/floor/plating,/area/construction/Storage)
+"ai" = (/turf/closed/indestructible/opshuttle,/area/construction/Storage)
+"aj" = (/obj/structure/simple_door/blast,/turf/open/floor/plating,/area/construction/Storage)
+"ak" = (/obj/effect/spawner/lootdrop/trash,/turf/open/floor/plating,/area/construction/Storage)
+"al" = (/obj/item/weapon/reagent_containers/glass/jerrycan,/obj/effect/spawner/lootdrop/trash,/turf/open/floor/plating,/area/construction/Storage)
+"am" = (/mob/living/simple_animal/hostile/ghoul{zrole = "soldier"},/turf/open/floor/plating,/area/construction/Storage)
+"an" = (/obj/structure/reagent_dispensers/barrel/two,/turf/open/floor/plating,/area/construction/Storage)
+"ao" = (/obj/structure/reagent_dispensers/barrel/explosive,/turf/open/floor/plating,/area/construction/Storage)
+"ap" = (/obj/structure/closet{name = "locker"},/obj/item/device/geiger_counter,/obj/effect/spawner/lootdrop/trash,/obj/effect/spawner/lootdrop/ammo,/obj/item/device/flashlight/torch/flare/blue,/obj/item/device/flashlight/torch/flare/blue,/obj/item/device/flashlight/red,/obj/effect/spawner/lootdrop/maintenance,/obj/effect/spawner/lootdrop/maintenance,/obj/item/device/geiger_counter,/obj/effect/spawner/lootdrop/military,/obj/effect/spawner/lootdrop/tools,/turf/open/floor/plating,/area/construction/Storage)
+"aq" = (/obj/docking_port/mobile/building,/turf/open/indestructible/ground/diggable/desert,/area/construction/Storage)
+"ar" = (/obj/docking_port/mobile/building,/turf/closed/indestructible/opshuttle,/area/construction/Storage)
+"as" = (/obj/structure/window/reinforced{dir = 8},/turf/open/floor/plating,/area/construction/Storage)
+"at" = (/obj/structure/closet/crate,/obj/item/weapon/reagent_containers/glass/jerrycan,/obj/effect/spawner/lootdrop/medicine,/obj/effect/spawner/lootdrop/medicine,/obj/item/stack/barbedwire,/obj/effect/spawner/lootdrop/military,/turf/open/floor/plating,/area/construction/Storage)
+"au" = (/obj/structure/reagent_dispensers/barrel/explosive,/mob/living/simple_animal/cockroach,/turf/open/floor/plating,/area/construction/Storage)
+"av" = (/obj/structure/window/reinforced{dir = 8},/mob/living/simple_animal/hostile/ghoul{zrole = "soldier"},/turf/open/floor/plating,/area/construction/Storage)
+"aw" = (/obj/structure/closet/crate,/obj/item/weapon/reagent_containers/glass/jerrycan,/obj/effect/spawner/lootdrop/trash,/obj/effect/spawner/lootdrop/maintenance,/obj/effect/spawner/lootdrop/military,/turf/open/floor/plating,/area/construction/Storage)
+"ax" = (/obj/item/weapon/reagent_containers/glass/jerrycan/large,/turf/open/floor/plating,/area/construction/Storage)
+"ay" = (/obj/structure/closet{name = "locker"},/obj/structure/window/reinforced{dir = 8},/obj/effect/spawner/lootdrop/trash,/obj/effect/spawner/lootdrop/clothing_middle,/obj/effect/spawner/lootdrop/clothing_middle,/turf/open/floor/plating,/area/construction/Storage)
+"az" = (/obj/structure/closet/bombcloset,/obj/effect/spawner/lootdrop/maintenance,/turf/open/floor/plating,/area/construction/Storage)
+"aA" = (/mob/living/simple_animal/cockroach,/turf/open/floor/plating,/area/construction/Storage)
+"aB" = (/obj/structure/window/reinforced,/obj/structure/ladder/unbreakable{height = 0; id = "army1"},/turf/open/floor/plating,/area/construction/Storage)
+"aC" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/table/reinforced,/obj/item/weapon/reagent_containers/pill/patch/radx,/obj/effect/spawner/lootdrop/trash,/obj/effect/spawner/lootdrop/crafts,/obj/effect/spawner/lootdrop/medicine/radiation,/turf/open/floor/plating,/area/construction/Storage)
+"aD" = (/obj/structure/closet{name = "locker"},/obj/item/clothing/gloves/color/orange,/obj/item/device/geiger_counter,/obj/effect/spawner/lootdrop/maintenance,/obj/effect/spawner/lootdrop/science,/turf/open/floor/plating,/area/construction/Storage)
+"aE" = (/obj/effect/decal/cleanable/vomit/old,/turf/open/floor/plating,/area/construction/Storage)
+"aF" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced,/obj/structure/table/reinforced,/obj/item/weapon/reagent_containers/pill/patch/radaway,/obj/effect/spawner/lootdrop/crafts,/obj/effect/spawner/lootdrop/crafts,/obj/effect/spawner/lootdrop/medicine/radiation,/turf/open/floor/plating,/area/construction/Storage)
+"aG" = (/obj/structure/window/reinforced,/obj/structure/closet{name = "locker"},/obj/item/device/geiger_counter,/obj/item/weapon/reagent_containers/pill/patch/radx,/obj/effect/spawner/lootdrop/trash,/obj/effect/spawner/lootdrop/medicine/radiation,/obj/effect/spawner/lootdrop/medicine/radiation,/obj/item/stack/barbedwire,/obj/effect/spawner/lootdrop/science,/turf/open/floor/plating,/area/construction/Storage)
+"aH" = (/obj/structure/sign/biohazard,/turf/closed/indestructible/opshuttle,/area/construction/Storage)
+"aI" = (/mob/living/simple_animal/hostile/ghoul{zrole = "scientist"},/turf/open/floor/plating,/area/construction/Storage)
+"aJ" = (/obj/structure/simple_door/metal/barred,/turf/open/floor/plating,/area/construction/Storage)
+"aK" = (/obj/item/clothing/suit/bio_suit/f13/hazmat,/obj/item/clothing/head/bio_hood/f13/hazmat,/obj/structure/closet{name = "locker"},/obj/item/clothing/gloves/color/orange,/turf/open/floor/plating,/area/construction/Storage)
+"aL" = (/obj/item/clothing/suit/bio_suit/f13/hazmat,/obj/item/clothing/head/bio_hood/f13/hazmat,/obj/structure/closet{name = "locker"},/obj/item/clothing/shoes/galoshes{name = "yellow boots"},/obj/item/weapon/reagent_containers/pill/patch/radx,/turf/open/floor/plating,/area/construction/Storage)
+"aM" = (/obj/structure/barricade/bars,/turf/open/floor/plating,/area/construction/Storage)
+"aN" = (/obj/structure/simple_door/blast{pass_id = "science"},/turf/open/floor/plating,/area/construction/Storage)
+"aO" = (/obj/structure/reagent_dispensers/barrel/dangerous,/obj/structure/window/reinforced{dir = 1},/turf/open/floor/plating,/area/construction/Storage)
+"aP" = (/obj/structure/window/reinforced{dir = 1},/obj/structure/reagent_dispensers/barrel/dangerous,/turf/open/floor/plating,/area/construction/Storage)
+"aQ" = (/obj/structure/window/reinforced{dir = 1},/mob/living/simple_animal/hostile/ghoul{zrole = "scientist"},/turf/open/floor/plating,/area/construction/Storage)
+"aR" = (/obj/structure/window/reinforced{dir = 1},/obj/effect/decal/cleanable/vomit/old,/turf/open/floor/plating,/area/construction/Storage)
+"aS" = (/obj/structure/sign/biohazard,/turf/closed/indestructible/opshuttle,/area/f13/building)
+"aT" = (/obj/structure/reagent_dispensers/barrel/dangerous,/turf/open/floor/plating,/area/construction/Storage)
+"aU" = (/obj/effect/decal/cleanable/waste,/obj/item/weapon/reagent_containers/glass/jug/lye_jug,/turf/open/floor/plating,/area/construction/Storage)
+"aV" = (/obj/structure/ladder/unbreakable{height = 0; id = "army2"},/turf/open/floor/plating,/area/construction/Storage)
+"aW" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/closet{name = "locker"},/obj/effect/spawner/lootdrop/trash,/obj/effect/spawner/lootdrop/trash,/obj/item/stack/barbedwire,/obj/effect/spawner/lootdrop/military,/turf/open/floor/plating,/area/construction/Storage)
+"aX" = (/obj/structure/rack,/obj/effect/spawner/lootdrop/trash,/obj/effect/spawner/lootdrop/trash,/obj/effect/spawner/lootdrop/crafts,/obj/effect/spawner/lootdrop/crafts,/turf/open/floor/plating,/area/construction/Storage)
+"aY" = (/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced,/obj/structure/closet{name = "locker"},/obj/effect/spawner/lootdrop/trash,/obj/effect/spawner/lootdrop/trash,/obj/effect/spawner/lootdrop/maintenance,/obj/item/stack/barbedwire,/obj/item/stack/barbedwire,/obj/item/stack/barbedwire,/obj/effect/spawner/lootdrop/military,/obj/effect/spawner/lootdrop/military,/turf/open/floor/plating,/area/construction/Storage)
+"aZ" = (/obj/structure/window/reinforced,/obj/structure/rack,/obj/effect/spawner/lootdrop/trash,/obj/effect/spawner/lootdrop/crafts,/turf/open/floor/plating,/area/construction/Storage)
+"ba" = (/obj/structure/simple_door/blast{pass_id = "military"},/turf/open/floor/plating,/area/construction/Storage)
+"bb" = (/obj/structure/window/reinforced{dir = 1},/obj/structure/reagent_dispensers/barrel/old,/turf/open/floor/plating,/area/construction/Storage)
+"bc" = (/obj/structure/window/reinforced{dir = 1},/obj/structure/reagent_dispensers/barrel/old,/mob/living/simple_animal/cockroach,/turf/open/floor/plating,/area/construction/Storage)
+"bd" = (/obj/structure/reagent_dispensers/barrel/three,/turf/open/floor/plating,/area/construction/Storage)
+"be" = (/obj/structure/reagent_dispensers/barrel/four,/turf/open/floor/plating,/area/construction/Storage)
+"bf" = (/obj/structure/table/reinforced,/obj/effect/spawner/lootdrop/trash,/obj/item/device/flashlight/seclite,/obj/effect/spawner/lootdrop/military,/obj/effect/spawner/lootdrop/military,/turf/open/floor/plating,/area/construction/Storage)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaababababaaaaaaaaaaaaaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaababacabacababaaabadababaaaaaaaaabaeabababaaaaaaaaaaabafabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abababababababababadadadababaaaaaaabaeaeaeaeabaaaaaaabafafafabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abacabacabacabaaabadadadadabaaaaaaabaeaeaeaeabaaaaaaafafafafabaaaaaaaaagaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abababahababaaaaabadadadadabaaaaaaabaeaeaeaeabaaaaaaabafafafabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abacababababaaaaaaadadadadabaaaaaaaaabaeaeaeabaaaaaaaaafafafabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+abababacababaaaaaaaaaaabababaaaaaaaaaaabababaaaaaaaaaaabafabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaabababaaaaaaaaaaaaababaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaiajaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaiaiakaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaialabamaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aianabababaoaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaiamabaoaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaiaiapaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aqaaaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiabababababaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiabababababaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiabababababajaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiabababababajaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiabababababaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiabababababaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+araiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaoaoaoasataiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaoaoauavawaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaxamabababajaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiabababamabajaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaoaoaoavamaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaoaoaoayazaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+araiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaAaBaCabaDaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiabaEaFabaGaHaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaIaAaJaIabajaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaKaLaMababaNaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaOaPaQaAaRaSaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaTaTaTaTaUaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+araiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiaVaWabaXaiaaaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiabaYabaZaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiababamabbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aiamabababajaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aibbbcambbaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aibdbeabbfaiaaaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+araiaiaiaiaiaiaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

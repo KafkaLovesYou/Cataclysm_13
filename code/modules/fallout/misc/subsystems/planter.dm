@@ -48,11 +48,11 @@ var/datum/subsystem/planter/SSplanter
 			continue
 		if(locate(/obj/structure/flora) in turf)
 			continue
-		if(prob(5))
+		if(prob(10))
 			new/obj/structure/flora/grass/wasteland(turf)
 		else
 			var/chance = 0
-			for(var/turf/open/indestructible/ground/desert/T in RANGE_TURFS(1,turf))
+			for(var/turf/open/indestructible/ground/diggable/desert/T in RANGE_TURFS(1,turf))
 				if(locate(/obj/structure/flora/grass) in T)
 					chance += 10
 			if(prob(chance))

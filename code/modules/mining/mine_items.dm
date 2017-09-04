@@ -170,7 +170,7 @@
 	icon_state = "shovel"
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
-	force = 8
+	force = 6
 	var/digspeed = 20
 	throwforce = 4
 	item_state = "shovel"
@@ -185,8 +185,8 @@
 	desc = "A small tool for digging and moving dirt."
 	icon_state = "spade"
 	item_state = "spade"
-	force = 5
-	throwforce = 7
+	force = 3
+	throwforce = 5
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/weapon/emptysandbag

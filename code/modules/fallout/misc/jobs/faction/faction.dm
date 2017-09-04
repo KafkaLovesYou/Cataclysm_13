@@ -119,13 +119,6 @@ mob/proc/begin_head_voting()
 			if(choice == M)
 				M.say(pick("I'm voting for myself", "I'm gonna be the new [F.head_status]!", "No one but myself is worthy."))
 			else
-				if(prob(1))
-					if(prob(50))
-						M.say("TRUMP FOREVER! MAKE WASTELAND GREAT AGAIN!!!")
-					else
-						M.say("PUTIN IS THE BEST! BOBAH YPA - 3OBET MOCKBA!!!")
-					sleep(20)
-					M.say("I changed my mind...")
 				M.say(pick("I vote for [choice].", "[choice] - I choose you!!!", "I choose [choice] to be [F.head_status].", "I believe [choice] is worthy to be our leader."))
 			choices[choice] += 1
 			voters_count -= 1
@@ -218,7 +211,7 @@ mob/proc/set_faction(var/faction)
 	description = "<b>Alignment: Chaotic Evil</b><br>Raiders - Any group of wastelanders who pillage, plunder, murder, or otherwise ruin the day of anyone unfortunate enough to not be one of them.<br>Raiders tend to organize into loose confederations of gangs in the post-apocalyptic wasteland, and are a constant problem.<br>Raiders typically prey upon travelers and very small towns, leaving more populous or larger areas alone."
 	verbs = list(/mob/proc/begin_head_voting)
 	area = /area/f13/raiders
-
+/*
 /datum/f13_faction/vault
 	name = "Vault"
 	color = "#005A20"
@@ -322,3 +315,4 @@ mob/proc/set_faction(var/faction)
 	verbs = list(/mob/proc/begin_head_voting)
 
 //	craft_recipes = list(/datum/table_recipe/den_encryption_key)
+*/

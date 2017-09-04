@@ -48,6 +48,12 @@
 	throw_speed = 3
 	throw_range = 7
 
+/obj/item/weapon/grown/bananapeel/turd //somehow not slipping?
+	name = "slippery waste"
+	desc = ""
+	icon_state = "turd"
+	item_state = "turd"
+
 /obj/item/weapon/grown/bananapeel/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is deliberately slipping on [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
 	playsound(loc, 'sound/misc/slip.ogg', 50, 1, -1)

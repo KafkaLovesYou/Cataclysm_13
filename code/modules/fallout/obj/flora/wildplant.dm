@@ -17,7 +17,7 @@
 	var/lastproduce
 
 
-/obj/structure/flora/wild_plant/New(var/turf/turf,var/seed)
+/*obj/structure/flora/wild_plant/New(var/turf/turf,var/seed)
 	if(!seed)
 		return
 	..(turf)
@@ -30,6 +30,9 @@
 	icon = myseed.growing_icon
 	START_PROCESSING(SSobj, src)
 	update_icon()
+*/
+/obj/structure/flora/wild_plant/New()
+	qdel(src)
 
 /obj/structure/flora/wild_plant/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/weapon/shovel))

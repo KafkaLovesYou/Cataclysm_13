@@ -196,19 +196,19 @@
 	list_reagents = list("hot_coco" = 30, "sugar" = 5)
 
 /obj/item/weapon/reagent_containers/food/drinks/dry_ramen
-	name = "Cup Ramen"
+	name = "instant ramen"
 	desc = "Just add 10ml of water, self heats! A taste that reminds you of your school years."
 	icon_state = "ramen"
 	list_reagents = list("dry_ramen" = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/beer
-	name = "Space Beer"
-	desc = "Beer. In space."
+	name = "beer"
+	desc = "Liquid bread, basically."
 	icon_state = "beer"
 	list_reagents = list("beer" = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/ale
-	name = "Magm-Ale"
+	name = "ale"
 	desc = "A true dorf's drink of choice."
 	icon_state = "alebottle"
 	item_state = "beer"
@@ -234,33 +234,41 @@
 	icon_state = "juicebox"
 	volume = 15 //I figure if you have to craft these it should at least be slightly better than something you can get for free from a watercooler
 
+/obj/item/weapon/reagent_containers/food/drinks/sillycup/smallcarton/New()
+	..()
+	pixel_x += rand(-6,6)
+	pixel_y += rand(-6,6)
+
+/obj/item/weapon/reagent_containers/food/drinks/sillycup/smallcarton/proc/update_reagents()
+	switch(reagents.get_master_reagent_id())
+		if("orangejuice")
+			icon_state = "orangebox"
+			name = "orange juice box"
+			desc = "A great source of vitamins. Stay healthy!"
+		if("milk")
+			icon_state = "milkbox"
+			name = "carton of milk"
+			desc = "An excellent source of calcium for growing settlers."
+		if("applejuice")
+			icon_state = "juicebox"
+			name = "apple juice box"
+			desc = "Sweet apple juice. Don't be late for school!"
+		if("grapejuice")
+			icon_state = "grapebox"
+			name = "grape juice box"
+			desc = "Tasty grape juice in a fun little container. Non-alcoholic!"
+		if("chocolate_milk")
+			icon_state = "chocolatebox"
+			name = "carton of chocolate milk"
+			desc = "Milk for cool kids!"
+		if("eggnog")
+			icon_state = "nog2"
+			name = "carton of eggnog"
+			desc = "For enjoying the most wonderful time of the year."
+
 /obj/item/weapon/reagent_containers/food/drinks/sillycup/smallcarton/on_reagent_change()
 	if (reagents.reagent_list.len)
-		switch(reagents.get_master_reagent_id())
-			if("orangejuice")
-				icon_state = "orangebox"
-				name = "orange juice box"
-				desc = "A great source of vitamins. Stay healthy!"
-			if("milk")
-				icon_state = "milkbox"
-				name = "carton of milk"
-				desc = "An excellent source of calcium for growing space explorers."
-			if("applejuice")
-				icon_state = "juicebox"
-				name = "apple juice box"
-				desc = "Sweet apple juice. Don't be late for school!"
-			if("grapejuice")
-				icon_state = "grapebox"
-				name = "grape juice box"
-				desc = "Tasty grape juice in a fun little container. Non-alcoholic!"
-			if("chocolate_milk")
-				icon_state = "chocolatebox"
-				name = "carton of chocolate milk"
-				desc = "Milk for cool kids!"
-			if("eggnog")
-				icon_state = "nog2"
-				name = "carton of eggnog"
-				desc = "For enjoying the most wonderful time of the year."
+		update_reagents()
 	else
 		icon_state = "juicebox"
 		name = "small carton"
@@ -283,7 +291,7 @@
 
 /obj/item/weapon/reagent_containers/food/drinks/flask
 	name = "flask"
-	desc = "Every good spaceman knows it's a good idea to bring along a couple of pints of whiskey wherever they go."
+	desc = "Every good noir protagonist knows it's a good idea to bring along a couple of pints of whiskey wherever they go."
 	icon_state = "flask"
 	materials = list(MAT_METAL=250)
 	volume = 60
@@ -334,19 +342,19 @@
 	..()
 
 /obj/item/weapon/reagent_containers/food/drinks/soda_cans/cola
-	name = "Space Cola"
-	desc = "Cola. in space."
+	name = "Cola"
+	desc = "Cola, sans coca"
 	icon_state = "cola"
 	list_reagents = list("cola" = 30)
 
 /obj/item/weapon/reagent_containers/food/drinks/soda_cans/tonic
-	name = "T-Borg's Tonic Water"
-	desc = "Quinine tastes funny, but at least it'll keep that Space Malaria away."
+	name = "Tonic Water"
+	desc = "Quinine tastes funny, but at least it's healthy."
 	icon_state = "tonic"
 	list_reagents = list("tonic" = 50)
 
 /obj/item/weapon/reagent_containers/food/drinks/soda_cans/sodawater
-	name = "Soda Water"
+	name = "Seltzer Water"
 	desc = "A can of soda water. Why not make a scotch and soda?"
 	icon_state = "sodawater"
 	list_reagents = list("sodawater" = 50)
@@ -362,8 +370,8 @@
 	name = "Lemon-Lime Soda"
 
 /obj/item/weapon/reagent_containers/food/drinks/soda_cans/space_up
-	name = "Space-Up"
-	desc = "Tastes like a hull breach in your mouth."
+	name = "Eleven-Up"
+	desc = "Tastes like a monday in your mouth."
 	icon_state = "space-up"
 	list_reagents = list("space_up" = 30)
 
@@ -374,8 +382,8 @@
 	list_reagents = list("cola" = 15, "orangejuice" = 15)
 
 /obj/item/weapon/reagent_containers/food/drinks/soda_cans/space_mountain_wind
-	name = "Space Mountain Wind"
-	desc = "Blows right through you like a space wind."
+	name = "Rosée du Monture"
+	desc = "Blows right through you like the mountain wind."
 	icon_state = "space_mountain_wind"
 	list_reagents = list("spacemountainwind" = 30)
 

@@ -133,7 +133,8 @@
 
 	area_type = /area
 	protected_areas = list(/area/maintenance, /area/ai_monitored/turret_protected/ai_upload, /area/ai_monitored/turret_protected/ai_upload_foyer,
-	/area/ai_monitored/turret_protected/ai, /area/storage/emergency, /area/storage/emergency2, /area/shuttle)
+	/area/ai_monitored/turret_protected/ai, /area/storage/emergency, /area/storage/emergency2, /area/shuttle, /area/f13/bunker, /area/f13/building,
+	/area/f13/caves)
 	target_z = ZLEVEL_STATION
 
 	immunity_type = "rad"

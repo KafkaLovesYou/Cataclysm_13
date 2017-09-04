@@ -169,6 +169,20 @@
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/steak/spider
 	slice_path = /obj/item/weapon/reagent_containers/food/snacks/meat/rawcutlet/spider
 
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/tainted
+	name = "tainted meat"
+	desc = "A slab of weird meat."
+	icon_state = "spidermeat"
+	list_reagents = list("nutriment" = 3, "toxin" = 3, "vitamin" = 1)
+	filling_color = "#7CFC00"
+	slice_path = null  //no cutlets
+
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/tainted/New()
+	..()
+	list_reagents = list("nutriment" = rand(2,4), "toxin" = pick(rand(0,6),rand(0,3),0), "vitamin" = 1)
+	cooked_type = pick(	/obj/item/weapon/reagent_containers/food/snacks/badrecipe, \
+						/obj/item/weapon/reagent_containers/food/snacks/meat/steak/plain, \
+						/obj/item/weapon/reagent_containers/food/snacks/meat/steak/tainted)
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/slab/goliath
 	name = "goliath meat"
@@ -215,12 +229,21 @@
 	icon_state = "meatsteak"
 	list_reagents = list("nutriment" = 5)
 	bonus_reagents = list("nutriment" = 2, "vitamin" = 1)
-	trash = /obj/item/trash/plate
+	trash = null
 	filling_color = "#B22222"
+
+/obj/item/weapon/reagent_containers/food/snacks/meat/steak/killertomato
+	name = "killer tomato steak"
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/plain
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/plain/human
+
+/obj/item/weapon/reagent_containers/food/snacks/meat/steak/tainted
+/obj/item/weapon/reagent_containers/food/snacks/meat/steak/tainted/New()
+	..()
+	list_reagents = list("nutriment" = rand(0,4), "toxin" = rand(0,5), "vitamin" = 1)
+
 
 /obj/item/weapon/reagent_containers/food/snacks/meat/steak/killertomato
 	name = "killer tomato steak"

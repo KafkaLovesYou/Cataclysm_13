@@ -77,7 +77,7 @@
 		set_light(3)
 	else
 		set_light(1)
-	var/turf/open/location = get_turf(src)//shity code detected
+//	var/turf/open/location = get_turf(src)//shity code detected
 //	if(istype(location))
 //		var/datum/gas_mixture/affected = location.air
 //		affected.temperature *= 1.01

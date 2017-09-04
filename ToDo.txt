@@ -1,0 +1,82 @@
+~padlocks
+	SEEMS TO WORK!!?
+	
+
+* use wood on barricades = wall 
+~ use rods on grille = fence
+	error sprite
+* build bars with rods
+
+remapping
+	less food
+	more peaceful mobs
+	pickaxes
+
+introduce C:DDA recipes, constructions, monsters
+
+
+spike pits
+* board up door/window
+log wall
+wood window frame
+* cot (make, recipe)
+* mattress (recipe)
+countertops?
+
+reintroduce bone as a material
+
+ITEMS
+* boxcutter
+* pocket knife
+* spikes
+* barbed wire
+* barbed wire bat (recipe)
+* spiked bat (recipe)
+* meat slabs (ant, fly, bee, wasp || insectoid?)
+* tainted meat!
+	
+
+enemies
+	insectoids
+		(ant larva, giant ant, soldier ant, ant queen, giant fly, giant bee, giant wasp)
+		(mosquito, dragonfly, centipede, slug, dermatiks)
+		giant spiders
+		sludge crawler, giant maggot
+	* ZOMBIES!!
+		need more sprites, overlays, special behavior
+	Triffids/Fungaloids
+	aminals! bears, beavers, coyotes, foxes, deer, dog, cat, cow, sheep, chickens, frogs, rabbits, mice, lizards
+		TODO: Sheep still need to spawn wool when sheared
+	Mutant animals?
+	
+
+RandomMap part
+	Mob spawn (triffids, insectoids, ants, spiders, horrors)
+	Rift (HORRORS!)
+	Swamp (Triffids, zombies, insectoids)
+	Plains (Ants, spiders, insectoids, zombies)
+	Forest (ants, spiders, insectoids)
+	Toxic wasteland (zombies, triffids, mutants)
+	Military base
+	Waste facility (Sewers!)
+	Research facility
+
+
+
+
+
+
+Implants!
+	* Adrenalin Pump ("adrenalin")
+	* Internal storage ("Storage")
+	* Directional EMP ("EMP")
+	Night vision
+	Integrated toolset
+	Alloy armor
+	Internal power storage
+	Solar power generator
+	Combustion power generator
+	Anti-glare compensators (internal welding mask)
+	
+
+

@@ -2,7 +2,7 @@
 
 /mob/living/simple_animal/hostile/protectron
 	name = "protectron"
-	desc = "A pre-War type of protectron.<br>Extremely dangerous machine."
+	desc = "An extremely dangerous machine."
 	icon = 'icons/fallout/mobs/animal.dmi'
 	icon_state = "protectron_old"
 	icon_living = "protectron_old"

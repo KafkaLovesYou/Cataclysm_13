@@ -73,7 +73,7 @@ This proc take soooo much perfomance.. Cause i'm using CHECK_TICK on every step,
 		jobs_data = "No available roles"
 	CHECK_TICK
 
-//Outfit data. Showing name of weared items. Taking item objects from pool (They already created and pooled at update_preview_icon())
+//Outfit data. Showing name of worn items. Taking item objects from pool (They already created and pooled at update_preview_icon())
 	var/datum/outfit/outfit
 	if(selected_job)
 		if(!outfits)

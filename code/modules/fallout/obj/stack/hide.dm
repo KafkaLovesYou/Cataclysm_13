@@ -31,3 +31,10 @@
 	icon = 'icons/fallout/objects/items.dmi'
 	icon_state = "sheet-skin"
 	origin_tech = null
+
+/obj/item/stack/sheet/chitin
+	name = "chitin"
+	icon = 'icons/obj/mining.dmi'
+	desc = "Carapace shell common for most large instectoids."
+	icon_state = "chitin"
+	origin_tech = "biotech=4"

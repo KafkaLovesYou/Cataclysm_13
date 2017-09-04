@@ -71,6 +71,9 @@
 	damage_type = OXY
 	nodamage = 1
 
+/obj/item/projectile/magic/resurrection/necromancer
+	name = "necromantic aura"
+
 /obj/item/projectile/magic/resurrection/on_hit(mob/living/carbon/target)
 	. = ..()
 	if(isliving(target))

@@ -67,7 +67,7 @@
 	icon = 'icons/fallout/objects/food&drinks/food.dmi'
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/bubblegum
-	name = "Bubblegum"
+	name = "bubblegum"
 	desc = "A Big Pops branded bubblegum."
 	icon_state = "bubblegum"
 	bonus_reagents = list("radium" = 2, "vitamin" = 1)
@@ -76,7 +76,7 @@
 	trash = /obj/item/trash/f13/bubblegum
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/bubblegum/large
-	name = "big Bubblegum"
+	name = "big bubblegum"
 	desc = "A large \"Extra\" Big Pops branded bubblegum."
 	icon_state = "bubblegum_large"
 	bonus_reagents = list("radium" = 4, "vitamin" = 2)
@@ -85,8 +85,8 @@
 	trash = /obj/item/trash/f13/bubblegum_large
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/cram
-	name = "Cram"
-	desc = "A blue labeled tin of processed meat, primarily used as rations for soldiers during the pre-War times."
+	name = "spiced ham"
+	desc = "A blue labeled tin of processed meat, primarily used as rations for soldiers."
 	icon_state = "cram"
 	bonus_reagents = list("radium" = 2, "vitamin" = 5)
 	list_reagents = list("nutriment" = 20)
@@ -94,8 +94,8 @@
 	trash = /obj/item/trash/f13/cram
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/cram/large
-	name = "big Cram"
-	desc = "A large blue labeled tin of processed meat, primarily used as rations for soldiers during the pre-War times."
+	name = "big spiced ham"
+	desc = "A large blue labeled tin of processed meat, primarily used as rations for soldiers."
 	icon_state = "cram_large"
 	bonus_reagents = list("radium" = 2, "vitamin" = 10)
 	list_reagents = list("nutriment" = 40)
@@ -103,8 +103,8 @@
 	trash = /obj/item/trash/f13/cram_large
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/yumyum
-	name = "YumYum"
-	desc = "YumYum was a pre-War company in the United States, producing packaged foods.<br>YumYum Deviled Eggs was their major product."
+	name = "YumYums"
+	desc = "Junk food!"
 	icon_state = "yumyum"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10)
@@ -112,7 +112,7 @@
 	trash = /obj/item/trash/f13/yumyum
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/fancylads
-	name = "Fancy Lads"
+	name = "Wonkies snack cakes"
 	desc = "The presence of snack cakes is a nod to the urban myth that Twinkies and other similar foods would survive a nuclear war.<br>The slogan is \"A big delight in every bite\"."
 	icon_state = "fancylads"
 	bonus_reagents = list("radium" = 2, "vitamin" = 1)
@@ -121,8 +121,8 @@
 	trash = /obj/item/trash/f13/fancylads
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/sugarbombs
-	name = "Sugar Bombs"
-	desc = "Sugar Bombs is a pre-War breakfast cereal that can be found all around the wasteland, packaged in white and blue boxes with a red ovoid logo at the top, fully labeled as \"Sugar Bombs breakfast cereal\"."
+	name = "cereal"
+	desc = "Crunchy!"
 	icon_state = "sugarbombs"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10, "sugar" = 10)
@@ -130,7 +130,7 @@
 	trash = /obj/item/trash/f13/sugarbombs
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/crisps
-	name = "Crisps"
+	name = "crisps"
 	desc = "Potato Crisps are packaged in a small red and green box, with a yellow bubble encouraging the purchaser to \"See Moon Map Offer on Back!\"."
 	icon_state = "crisps"
 	bonus_reagents = list("radium" = 2, "vitamin" = 1)
@@ -139,7 +139,7 @@
 	trash = /obj/item/trash/f13/crisps
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/steak
-	name = "Salisbury Steak"
+	name = "TV dinner"
 	desc = "A worn, red box displaying a picture of steak with the words \"Salisbury Steak\" at the top and \"now with Gravy!\" at the bottom."
 	icon_state = "steak"
 	bonus_reagents = list("radium" = 2, "vitamin" = 5)
@@ -148,8 +148,8 @@
 	trash = /obj/item/trash/f13/steak
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/specialapples
-	name = "Dandy Apples Special"
-	desc = "Dandy Apples Special are a product from the pre-War company Dandy Boy. On the sides of the box there is some sort of apple mascot with a bowler hat, monocle and mustache."
+	name = "pretzels"
+	desc = "Delicious!"
 	icon_state = "specialapples"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10, "tricordrazine" = 10)
@@ -157,8 +157,8 @@
 	trash = /obj/item/trash/f13/specialapples
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/dandyapples
-	name = "Dandy Boy Apples"
-	desc = "Dandy Boy Apples are a product from the pre-War company Dandy Boy, consisting of candied apples packaged in a red cardboard box."
+	name = "pretzels"
+	desc = "Delicious!"
 	icon_state = "dandyapples"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 10, "sugar" = 10)
@@ -166,8 +166,8 @@
 	trash = /obj/item/trash/f13/dandyapples
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/blamco
-	name = "BlamCo"
-	desc = "BlamCo was a pre-War company in the United States, producing packaged foods.<br>BlamCo Mac & Cheese was their major product.<br>Unlike other foods, like apples or eggs, wheat cannot be freeze-dried. How the macaroni remains edible is unclear."
+	name = "mac'n'cheese"
+	desc = "Cheesy, not so macky."
 	icon_state = "blamco"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
 	list_reagents = list("nutriment" = 15)
@@ -175,8 +175,8 @@
 	trash = /obj/item/trash/f13/blamco
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/blamco/large
-	name = "big BlamCo"
-	desc = "BlamCo was a pre-War company in the United States, producing packaged foods.<br>BlamCo Mac & Cheese was their major product.<br>Unlike other foods, like apples or eggs, wheat cannot be freeze-dried. How the macaroni remains edible is unclear."
+	name = "big mac'n'cheese"
+	desc = "Now with extra stuff!"
 	icon_state = "blamco_large"
 	bonus_reagents = list("radium" = 4, "vitamin" = 4)
 	list_reagents = list("nutriment" = 30)
@@ -184,8 +184,8 @@
 	trash = /obj/item/trash/f13/blamco_large
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/mechanic
-	name = "MechaMash"
-	desc = "MechaMash is packaged in a white box with blue highlights, and a wrench logo printed on the front.<br>It appears to be a form of instant potatoes that smells like WD-40..."
+	name = "instant mashed potatoes"
+	desc = "It appears to be a form of instant potatoes that smells like WD-40..."
 	icon_state = "mechanist"
 	bonus_reagents = list("radium" = 2, "vitamin" = 3)
 	list_reagents = list("nutriment" = 15)
@@ -193,7 +193,7 @@
 	trash = /obj/item/trash/f13/mechanist
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/instamash
-	name = "InstaMash"
+	name = "instamash"
 	desc = "InstaMash is packaged in a white box with blue highlights.<br>It appears to be a form of instant potatoes."
 	icon_state = "instamash"
 	bonus_reagents = list("radium" = 2, "vitamin" = 2)
@@ -202,10 +202,10 @@
 	trash = /obj/item/trash/f13/instamash
 
 /obj/item/weapon/reagent_containers/food/snacks/f13/porknbeans
-	name = "Pork n' Beans"
-	desc = "Pork n' Beans come in a small brown and orange tin, with a label that reads \"Greasy Prospector Improved Pork And Beans\".<br>Toward the bottom of the label is printed that the beans come \"With Hickory Smoked Pig Fat Chunks\"."
+	name = "pork'n'beans"
+	desc = "Pork'n'Beans come in a small brown and orange tin, with a label that reads \"Greasy Prospector Improved Pork And Beans\".<br>Toward the bottom of the label is printed that the beans come \"With Hickory Smoked Pig Fat Chunks\"."
 	icon_state = "porknbeans"
-	bonus_reagents = list("radium" = 1, "vitamin" = 2)
+	bonus_reagents = list("radium" = 1, "vitamin" = 5)
 	list_reagents = list("nutriment" = 35)
 	filling_color = "#B22222"
 	trash = /obj/item/trash/f13/porknbeans

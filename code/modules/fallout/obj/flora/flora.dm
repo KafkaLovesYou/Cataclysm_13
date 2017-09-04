@@ -53,8 +53,8 @@
 	max_integrity = 350
 
 /obj/structure/flora/tree/tall/New()
-	icon_state = "tree_[rand(1,3)]"
 	..()
+	icon_state = "tree_[rand(1,3)]"
 
 /obj/structure/flora/tree/tall/attackby(obj/item/weapon/W, mob/user, params)
 	..()

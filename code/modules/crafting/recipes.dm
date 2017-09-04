@@ -10,6 +10,8 @@
 	var/category = CAT_NONE //where it shows up in the crafting UI
 /*
 
+ALL RECIPES ARE MOVED TO modules/fallout/misc/craft_recipes.dm
+
 /datum/crafting_recipe/pin_removal
 	name = "Pin Removal"
 	result = /obj/item/weapon/gun
