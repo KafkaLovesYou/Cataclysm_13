@@ -50,6 +50,8 @@
 	see_invisible = SEE_INVISIBLE_MINIMUM
 	see_in_dark = 4
 	var/playable_spider = FALSE
+	var/atom/movable/cocoon_target
+	var/fed = 0
 
 /mob/living/simple_animal/hostile/poison/giant_spider/Topic(href, href_list)
 	if(href_list["activate"])
@@ -86,8 +88,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 10
 	poison_per_bite = 3
-	var/atom/movable/cocoon_target
-	var/fed = 0
+
 
 //hunters have the most poison and move the fastest, so they can find prey
 /mob/living/simple_animal/hostile/poison/giant_spider/hunter
@@ -115,7 +116,7 @@
 				walk(src,0)
 		return 1
 
-/mob/living/simple_animal/hostile/poison/giant_spider/nurse/proc/GiveUp(C)
+/mob/living/simple_animal/hostile/poison/giant_spider/proc/GiveUp(C)
 	spawn(100)
 		if(busy == MOVING_TO_TARGET)
 			if(cocoon_target == C && get_dist(src,cocoon_target) > 1)
@@ -179,7 +180,7 @@
 		return
 	if(busy != SPINNING_WEB)
 		busy = SPINNING_WEB
-		src.visible_message("<span class='notice'>\the [src] begins to secrete a sticky substance.</span>")
+		src.visible_message("<span class='notice'>\The [src] begins to secrete a sticky substance.</span>")
 		stop_automated_movement = 1
 		if(do_after(src, 40, target = T))
 			if(busy == SPINNING_WEB && src.loc == T)
@@ -188,7 +189,7 @@
 		stop_automated_movement = 0
 
 
-/mob/living/simple_animal/hostile/poison/giant_spider/nurse/verb/Wrap()
+/mob/living/simple_animal/hostile/poison/giant_spider/verb/Wrap()
 	set name = "Wrap"
 	set category = "Spider"
 	set desc = "Wrap up prey to feast upon and objects for safe keeping."
@@ -251,7 +252,7 @@
 		busy = 0
 		stop_automated_movement = 0
 
-/mob/living/simple_animal/hostile/poison/giant_spider/nurse/verb/LayEggs()
+/mob/living/simple_animal/hostile/poison/giant_spider/verb/LayEggs()
 	set name = "Lay Eggs"
 	set category = "Spider"
 	set desc = "Lay a clutch of eggs, but you must wrap a creature for feeding first."

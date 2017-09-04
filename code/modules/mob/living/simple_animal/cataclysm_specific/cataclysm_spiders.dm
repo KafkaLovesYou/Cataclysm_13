@@ -1,4 +1,8 @@
-//Cataclysm varieties; TODO; Setup icon states
+#define SPINNING_WEB 1
+#define LAYING_EGGS 2
+#define MOVING_TO_TARGET 3
+#define SPINNING_COCOON 4
+
 //Wolf spiders, fast, low health, aggressive
 /mob/living/simple_animal/hostile/poison/giant_spider/wolf
 	name = "wolf spider"
@@ -90,3 +94,93 @@
 	melee_damage_upper = 10
 	poison_per_bite = 7
 	turns_per_move = 15 //should be VERY slow
+
+//Had to do some minor refactoring in giant_spider.dm so certain verbs and procs can be called by spiders other than the (unused) Nurse variant
+//This does mean that all spiders have these verbs, which is maybe not useful if we want player spiders...
+/mob/living/simple_animal/hostile/poison/giant_spider/blackwidow/handle_automated_action() //lays eggs and makes webs
+	if(..())
+		var/list/can_see = view(src, 10)
+		if(!busy && prob(30))	//30% chance to stop wandering and do something
+			//first, check for potential food nearby to cocoon
+			for(var/mob/living/C in can_see)
+				if(C.stat && !istype(C,/mob/living/simple_animal/hostile/poison/giant_spider) && !C.anchored)
+					cocoon_target = C
+					busy = MOVING_TO_TARGET
+					Goto(C, move_to_delay)
+					//give up if we can't reach them after 10 seconds
+					GiveUp(C)
+					return
+
+			//second, spin a sticky spiderweb on this tile
+			var/obj/structure/spider/stickyweb/W = locate() in get_turf(src)
+			if(!W)
+				Web()
+			else
+				//third, lay an egg cluster there
+				if(fed)
+					LayEggs()
+				else
+					//fourthly, cocoon any nearby items so those pesky pinkskins can't use them
+					for(var/obj/O in can_see)
+
+						if(O.anchored)
+							continue
+
+						if(istype(O, /obj/item) || istype(O, /obj/structure) || istype(O, /obj/machinery))
+							cocoon_target = O
+							busy = MOVING_TO_TARGET
+							stop_automated_movement = 1
+							Goto(O, move_to_delay)
+							//give up if we can't reach them after 10 seconds
+							GiveUp(O)
+
+		else if(busy == MOVING_TO_TARGET && cocoon_target)
+			if(get_dist(src, cocoon_target) <= 1)
+				Wrap()
+
+	else
+		busy = 0
+		stop_automated_movement = 0
+
+
+/mob/living/simple_animal/hostile/poison/giant_spider/web/handle_automated_action() //makes webs and cocoons
+	if(..())
+		var/list/can_see = view(src, 10)
+		if(!busy && prob(15))	//15% chance to stop wandering and do something
+			//first, spin a sticky spiderweb on this tile
+			var/obj/structure/spider/stickyweb/W = locate() in get_turf(src)
+			if(!W)
+				Web()
+			else
+				//secondly, cocoon any nearby items so those pesky pinkskins can't use them
+				for(var/obj/O in can_see)
+					if(O.anchored)
+						continue
+					if(istype(O, /obj/item) || istype(O, /obj/structure) || istype(O, /obj/machinery))
+						cocoon_target = O
+						busy = MOVING_TO_TARGET
+						stop_automated_movement = 1
+						Goto(O, move_to_delay)
+						//give up if we can't reach them after 10 seconds
+						GiveUp(O)
+
+		else if(busy == MOVING_TO_TARGET && cocoon_target)
+			if(get_dist(src, cocoon_target) <= 1)
+				Wrap()
+
+	else
+		busy = 0
+		stop_automated_movement = 0
+
+
+/mob/living/simple_animal/hostile/poison/giant_spider/trapdoor/handle_automated_action() //only makes webs
+	if(..())
+		//var/list/can_see = view(src, 10)
+		if(!busy && prob(50))	//50% chance to stop wandering and do something
+			//first, spin a sticky spiderweb on this tile
+			var/obj/structure/spider/stickyweb/W = locate() in get_turf(src)
+			if(!W && prob(15)) //add a 15% barrier just because
+				Web()
+	else
+		busy = 0
+		stop_automated_movement = 0

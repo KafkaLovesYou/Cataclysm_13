@@ -135,7 +135,6 @@ var/global/list/datum/stack_recipe/xeno_recipes = list ( \
 	icon_state = "sinew"
 	origin_tech = "biotech=4"
 
-
 var/global/list/datum/stack_recipe/sinew_recipes = list ( \
 //	new/datum/stack_recipe("sinew restraints", /obj/item/weapon/restraints/handcuffs/sinew, 1, on_floor = 1),
 	)
@@ -143,6 +142,22 @@ var/global/list/datum/stack_recipe/sinew_recipes = list ( \
 /obj/item/stack/sheet/sinew/New(var/loc, var/amount=null)
 	recipes = sinew_recipes
 	return ..()
+
+//triffid plant fibre stuff
+/obj/item/stack/sheet/sinew/plant
+	name = "plant fibre"
+	desc = "Long stringy filaments of plant matter."
+	singular_name = "plant fibre"
+
+/obj/item/stack/sheet/sinew/plant/New(var/loc, var/amount=null)
+	recipes = fibre_recipes
+	return ..()
+
+var/global/list/datum/stack_recipe/fibre_recipes = list ( \
+//	meh maybe add something here
+)
+
+
 		/*
  * Plates
  		*/

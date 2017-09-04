@@ -85,7 +85,7 @@
 	ambientmusic = list('sound/f13music/fo2_village.ogg','sound/f13music/fo2_wasteland.ogg','sound/f13music/fo2_chapel.ogg','sound/misc/null.ogg')
 	ambientsounds = list('sound/f13ambience/dog_distant_1.ogg','sound/f13ambience/dog_distant_2.ogg','sound/f13ambience/dog_distant_3.ogg', \
 	'sound/f13ambience/bird_1.ogg','sound/f13ambience/bird_2.ogg','sound/f13ambience/bird_3.ogg','sound/f13ambience/bird_4.ogg','sound/f13ambience/bird_5.ogg','sound/f13ambience/bird_6.ogg','sound/f13ambience/bird_7.ogg','sound/f13ambience/bird_8.ogg')
-	outdoors = 1
+	outdoors = 0
 	open_space = 1
 	blob_allowed = 0
 	environment = 15
@@ -116,6 +116,11 @@
 	blob_allowed = 0
 	environment = 15
 	grow_chance = 5
+
+/area/f13/village/interior
+	name = "village interior"
+	outdoors = 0
+	open_space = 0
 
 /area/f13/outpost
 	name = "Outpost"
@@ -168,6 +173,16 @@
 	blob_allowed = 0
 	environment = 16
 	grow_chance = 5
+
+/area/f13/city/level2/interior
+	name = "City Level 2 Interior"
+	outdoors = 0
+	open_space = 1
+
+/area/f13/city/interior
+	name = "City, Interior"
+	outdoors = 0
+	open_space = 1
 
 /area/f13/citycaves
 	name = "City Caves"

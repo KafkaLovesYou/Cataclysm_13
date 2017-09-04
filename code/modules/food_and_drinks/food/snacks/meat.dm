@@ -104,6 +104,17 @@
 	desc = "Halfway to becoming fertilizer for your garden."
 	filling_color = "#6B8E23"
 
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/triffid
+	icon_state = "plantmeat"
+	name = "plant marrow"
+	desc = "All the joys of healthy eating with all the fun of cannibalism."
+	filling_color = "#E9967A"
+	dried_type = /obj/item/weapon/reagent_containers/food/snacks/meat/slab/triffid
+	list_reagents = list("nutriment" = 3)
+	bonus_reagents = list("nutriment" = 1, "vitamin" = 4)
+	cooked_type = null
+	slice_path = null
+
 
 
 

@@ -165,6 +165,7 @@
 			color = "f4fcff"
 		if("toppler") 	//disarm intent!
 			a_intent = INTENT_DISARM
+			status_flags = CANPUSH
 		if("howler") 	//sonic attack, attract zombies
 			desc += "<br>Its torso is unusually wide."
 			aggro_sound_chance = 10
